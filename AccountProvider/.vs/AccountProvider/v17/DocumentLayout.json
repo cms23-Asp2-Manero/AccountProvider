@@ -1,0 +1,125 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Nackademin\\cms23-Asp2-Manero\\AccountProvider\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{0ED34F99-1A61-49AE-9C61-69CC0D80DDA8}|AccountProviderFunction\\AccountProviderFunction.csproj|d:\\nackademin\\cms23-asp2-manero\\accountprovider\\accountproviderfunction\\accountprovider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0ED34F99-1A61-49AE-9C61-69CC0D80DDA8}|AccountProviderFunction\\AccountProviderFunction.csproj|solutionrelative:accountproviderfunction\\accountprovider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0ED34F99-1A61-49AE-9C61-69CC0D80DDA8}|AccountProviderFunction\\AccountProviderFunction.csproj|d:\\nackademin\\cms23-asp2-manero\\accountprovider\\accountproviderfunction\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0ED34F99-1A61-49AE-9C61-69CC0D80DDA8}|AccountProviderFunction\\AccountProviderFunction.csproj|solutionrelative:accountproviderfunction\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0ED34F99-1A61-49AE-9C61-69CC0D80DDA8}|AccountProviderFunction\\AccountProviderFunction.csproj|d:\\nackademin\\cms23-asp2-manero\\accountprovider\\accountproviderfunction\\data\\entities\\accountentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0ED34F99-1A61-49AE-9C61-69CC0D80DDA8}|AccountProviderFunction\\AccountProviderFunction.csproj|solutionrelative:accountproviderfunction\\data\\entities\\accountentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0ED34F99-1A61-49AE-9C61-69CC0D80DDA8}|AccountProviderFunction\\AccountProviderFunction.csproj|d:\\nackademin\\cms23-asp2-manero\\accountprovider\\accountproviderfunction\\data\\contexts\\context.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0ED34F99-1A61-49AE-9C61-69CC0D80DDA8}|AccountProviderFunction\\AccountProviderFunction.csproj|solutionrelative:accountproviderfunction\\data\\contexts\\context.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0ED34F99-1A61-49AE-9C61-69CC0D80DDA8}|AccountProviderFunction\\AccountProviderFunction.csproj|d:\\nackademin\\cms23-asp2-manero\\accountprovider\\accountproviderfunction\\local.settings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{0ED34F99-1A61-49AE-9C61-69CC0D80DDA8}|AccountProviderFunction\\AccountProviderFunction.csproj|solutionrelative:accountproviderfunction\\local.settings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0ED34F99-1A61-49AE-9C61-69CC0D80DDA8}|AccountProviderFunction\\AccountProviderFunction.csproj|d:\\nackademin\\cms23-asp2-manero\\accountprovider\\accountproviderfunction\\host.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{0ED34F99-1A61-49AE-9C61-69CC0D80DDA8}|AccountProviderFunction\\AccountProviderFunction.csproj|solutionrelative:accountproviderfunction\\host.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{e506b91c-c606-466a-90a9-123d1d1e12b3}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "local.settings.json",
+              "DocumentMoniker": "D:\\Nackademin\\cms23-Asp2-Manero\\AccountProvider\\AccountProviderFunction\\local.settings.json",
+              "RelativeDocumentMoniker": "AccountProviderFunction\\local.settings.json",
+              "ToolTip": "D:\\Nackademin\\cms23-Asp2-Manero\\AccountProvider\\AccountProviderFunction\\local.settings.json",
+              "RelativeToolTip": "AccountProviderFunction\\local.settings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAqAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-05-10T15:58:42.233Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AccountEntity.cs",
+              "DocumentMoniker": "D:\\Nackademin\\cms23-Asp2-Manero\\AccountProvider\\AccountProviderFunction\\Data\\Entities\\AccountEntity.cs",
+              "RelativeDocumentMoniker": "AccountProviderFunction\\Data\\Entities\\AccountEntity.cs",
+              "ToolTip": "D:\\Nackademin\\cms23-Asp2-Manero\\AccountProvider\\AccountProviderFunction\\Data\\Entities\\AccountEntity.cs",
+              "RelativeToolTip": "AccountProviderFunction\\Data\\Entities\\AccountEntity.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAaAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-10T15:53:40.289Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Context.cs",
+              "DocumentMoniker": "D:\\Nackademin\\cms23-Asp2-Manero\\AccountProvider\\AccountProviderFunction\\Data\\contexts\\Context.cs",
+              "RelativeDocumentMoniker": "AccountProviderFunction\\Data\\contexts\\Context.cs",
+              "ToolTip": "D:\\Nackademin\\cms23-Asp2-Manero\\AccountProvider\\AccountProviderFunction\\Data\\contexts\\Context.cs",
+              "RelativeToolTip": "AccountProviderFunction\\Data\\contexts\\Context.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAEAAAAkAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-10T15:50:29.898Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AccountProvider.cs",
+              "DocumentMoniker": "D:\\Nackademin\\cms23-Asp2-Manero\\AccountProvider\\AccountProviderFunction\\AccountProvider.cs",
+              "RelativeDocumentMoniker": "AccountProviderFunction\\AccountProvider.cs",
+              "ToolTip": "D:\\Nackademin\\cms23-Asp2-Manero\\AccountProvider\\AccountProviderFunction\\AccountProvider.cs",
+              "RelativeToolTip": "AccountProviderFunction\\AccountProvider.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAjAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-10T15:38:48.66Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\Nackademin\\cms23-Asp2-Manero\\AccountProvider\\AccountProviderFunction\\Program.cs",
+              "RelativeDocumentMoniker": "AccountProviderFunction\\Program.cs",
+              "ToolTip": "D:\\Nackademin\\cms23-Asp2-Manero\\AccountProvider\\AccountProviderFunction\\Program.cs",
+              "RelativeToolTip": "AccountProviderFunction\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAALAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-10T15:35:59.95Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "host.json",
+              "DocumentMoniker": "D:\\Nackademin\\cms23-Asp2-Manero\\AccountProvider\\AccountProviderFunction\\host.json",
+              "RelativeDocumentMoniker": "AccountProviderFunction\\host.json",
+              "ToolTip": "D:\\Nackademin\\cms23-Asp2-Manero\\AccountProvider\\AccountProviderFunction\\host.json",
+              "RelativeToolTip": "AccountProviderFunction\\host.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-05-10T15:35:49.462Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
