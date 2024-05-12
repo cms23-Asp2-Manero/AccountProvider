@@ -17,7 +17,7 @@ namespace AccountProvider.Functions
         private readonly Context _context = context;
 
         [Function("AccountProvider")]
-        public async Task<IActionResult> Run([HttpTrigger(AuthorizationLevel.Function, "get", "post")] HttpRequest req)
+        public async Task<IActionResult> Run([HttpTrigger(AuthorizationLevel.Function, "get", "post", "put")] HttpRequest req)
         {
             _logger.LogInformation("C# HTTP trigger function processed a request.");
 
@@ -42,6 +42,35 @@ namespace AccountProvider.Functions
                 catch (Exception ex)
                 {
                     return new BadRequestObjectResult(ex);
+                }
+                
+            }
+
+            if (req.Method == HttpMethods.Put)
+            {
+                try
+                {
+                    string message = await new StreamReader(req.Body).ReadToEndAsync();
+                    AccountEntity? account = JsonConvert.DeserializeObject<AccountEntity>(message);
+                    if (account != null)
+                    {
+                        AccountEntity? entity = await _context.Accounts.FirstOrDefaultAsync(x => x.UserId == account.UserId);
+                        if (entity != null)
+                        {
+                            _context.Update(account);
+                            await _context.SaveChangesAsync();
+                            return new OkObjectResult(account);
+                        }
+                        return new NotFoundObjectResult("No Object found with id: " + account.UserId);
+                    }
+                    else
+                    {
+                        return new BadRequestResult();
+                    }
+                }
+                catch
+                {
+                    return new BadRequestResult();
                 }
                 
             }
