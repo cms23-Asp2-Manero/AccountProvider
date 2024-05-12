@@ -1,9 +1,21 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\Nackademin\\AccountProvider\\",
+  "WorkspaceRootPath": "D:\\Nackademin\\cms23-Asp2-Manero\\AccountProvider\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{C8EA43B3-5B8E-4584-A95A-5BCF4FB8A8F1}|AccountProvider\\AccountProvider.csproj|d:\\nackademin\\accountprovider\\accountprovider\\functions\\accountprovider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{C8EA43B3-5B8E-4584-A95A-5BCF4FB8A8F1}|AccountProvider\\AccountProvider.csproj|d:\\nackademin\\cms23-asp2-manero\\accountprovider\\accountprovider\\local.settings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{C8EA43B3-5B8E-4584-A95A-5BCF4FB8A8F1}|AccountProvider\\AccountProvider.csproj|solutionrelative:accountprovider\\local.settings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C8EA43B3-5B8E-4584-A95A-5BCF4FB8A8F1}|AccountProvider\\AccountProvider.csproj|d:\\nackademin\\cms23-asp2-manero\\accountprovider\\accountprovider\\host.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{C8EA43B3-5B8E-4584-A95A-5BCF4FB8A8F1}|AccountProvider\\AccountProvider.csproj|solutionrelative:accountprovider\\host.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C8EA43B3-5B8E-4584-A95A-5BCF4FB8A8F1}|AccountProvider\\AccountProvider.csproj|d:\\nackademin\\cms23-asp2-manero\\accountprovider\\accountprovider\\.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{C8EA43B3-5B8E-4584-A95A-5BCF4FB8A8F1}|AccountProvider\\AccountProvider.csproj|solutionrelative:accountprovider\\.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C8EA43B3-5B8E-4584-A95A-5BCF4FB8A8F1}|AccountProvider\\AccountProvider.csproj|d:\\nackademin\\cms23-asp2-manero\\accountprovider\\accountprovider\\functions\\accountprovider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C8EA43B3-5B8E-4584-A95A-5BCF4FB8A8F1}|AccountProvider\\AccountProvider.csproj|solutionrelative:accountprovider\\functions\\accountprovider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -14,24 +26,64 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{e506b91c-c606-466a-90a9-123d1d1e12b3}"
             },
             {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{0174dea2-fdbe-4ef1-8f99-c0beae78880f}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "host.json",
+              "DocumentMoniker": "D:\\Nackademin\\cms23-Asp2-Manero\\AccountProvider\\AccountProvider\\host.json",
+              "RelativeDocumentMoniker": "AccountProvider\\host.json",
+              "ToolTip": "D:\\Nackademin\\cms23-Asp2-Manero\\AccountProvider\\AccountProvider\\host.json",
+              "RelativeToolTip": "AccountProvider\\host.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-05-12T13:16:33.816Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": ".gitignore",
+              "DocumentMoniker": "D:\\Nackademin\\cms23-Asp2-Manero\\AccountProvider\\AccountProvider\\.gitignore",
+              "RelativeDocumentMoniker": "AccountProvider\\.gitignore",
+              "ToolTip": "D:\\Nackademin\\cms23-Asp2-Manero\\AccountProvider\\AccountProvider\\.gitignore",
+              "RelativeToolTip": "AccountProvider\\.gitignore",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAF8SURBVDhPjVNLTgJBEG1lwpoFB3GNK9fieA48hD8iwT/ihwgSDAIHgAGXXsEV18CNzL/LquqZdsYM6kteXqcy3fWqpmpNRBgOhyABBEgpAFVKPIMUcYzUyOU\u002BXM/b2qtU3vkSfRjjZTCAMAw1A2LwzdFoBPP5HNqdzuL27n4juibWI\u002BUshBA1DIkhEx9iEorFotgslQqGYbxxAGFEqt1MxmPWJLbLZdZ\u002Bv89q5PMFPiTR6z2zdaxR0fXA0XTBcVywkb4fwHXjRteecIDNQ7UmExVYAdPcxYaqclN46na5WenMKjtlVnTYwcXlVYaDqImW9beD5N/TeGy32QHXm6hZ03ZgiSQHp2fnWQ4oBmJqWSqwAqZpZjt4aLXAD4J0VqyZsmoubfB8H2r1eoaD6NXZ9HcHO\u002BSA3f4AjifXl8rItOETM8ckB9WTWpYD9RdeZ1PWVWAHWXPQaDb59f/w8LiqHeh1pvGkCaP6qB8yXusoxmuNZ7XmII4O9vGuEF86osuDYRkpYQAAAABJRU5ErkJggg==",
+              "WhenOpened": "2024-05-12T13:16:27.105Z"
+            },
+            {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "AccountProvider.cs",
-              "DocumentMoniker": "D:\\Nackademin\\AccountProvider\\AccountProvider\\Functions\\AccountProvider.cs",
-              "RelativeDocumentMoniker": "AccountProvider\\Functions\\AccountProvider.cs",
-              "ToolTip": "D:\\Nackademin\\AccountProvider\\AccountProvider\\Functions\\AccountProvider.cs",
-              "RelativeToolTip": "AccountProvider\\Functions\\AccountProvider.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAlAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-10T16:56:46.739Z",
+              "Title": "local.settings.json",
+              "DocumentMoniker": "D:\\Nackademin\\cms23-Asp2-Manero\\AccountProvider\\AccountProvider\\local.settings.json",
+              "RelativeDocumentMoniker": "AccountProvider\\local.settings.json",
+              "ToolTip": "D:\\Nackademin\\cms23-Asp2-Manero\\AccountProvider\\AccountProvider\\local.settings.json",
+              "RelativeToolTip": "AccountProvider\\local.settings.json",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAAcAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-05-12T13:16:22.049Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "AccountProvider.cs",
+              "DocumentMoniker": "D:\\Nackademin\\cms23-Asp2-Manero\\AccountProvider\\AccountProvider\\Functions\\AccountProvider.cs",
+              "RelativeDocumentMoniker": "AccountProvider\\Functions\\AccountProvider.cs",
+              "ToolTip": "D:\\Nackademin\\cms23-Asp2-Manero\\AccountProvider\\AccountProvider\\Functions\\AccountProvider.cs",
+              "RelativeToolTip": "AccountProvider\\Functions\\AccountProvider.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAAsAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-10T16:56:46.739Z"
             }
           ]
         }
