@@ -1,42 +1,18 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\Nackademin\\cms23-Asp2-Manero\\AccountProvider\\",
+  "WorkspaceRootPath": "C:\\Nackademin\\AccountProvider\\AccountProvider\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{C8EA43B3-5B8E-4584-A95A-5BCF4FB8A8F1}|AccountProvider\\AccountProvider.csproj|d:\\nackademin\\cms23-asp2-manero\\accountprovider\\accountprovider\\functions\\accountproviderid.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C8EA43B3-5B8E-4584-A95A-5BCF4FB8A8F1}|AccountProvider\\AccountProvider.csproj|solutionrelative:accountprovider\\functions\\accountproviderid.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C8EA43B3-5B8E-4584-A95A-5BCF4FB8A8F1}|AccountProvider\\AccountProvider.csproj|d:\\nackademin\\cms23-asp2-manero\\accountprovider\\accountprovider\\functions\\accountprovider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{C8EA43B3-5B8E-4584-A95A-5BCF4FB8A8F1}|AccountProvider\\AccountProvider.csproj|c:\\nackademin\\accountprovider\\accountprovider\\accountprovider\\functions\\accountprovider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C8EA43B3-5B8E-4584-A95A-5BCF4FB8A8F1}|AccountProvider\\AccountProvider.csproj|solutionrelative:accountprovider\\functions\\accountprovider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C8EA43B3-5B8E-4584-A95A-5BCF4FB8A8F1}|AccountProvider\\AccountProvider.csproj|d:\\nackademin\\cms23-asp2-manero\\accountprovider\\accountprovider\\data\\entities\\accountentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C8EA43B3-5B8E-4584-A95A-5BCF4FB8A8F1}|AccountProvider\\AccountProvider.csproj|solutionrelative:accountprovider\\data\\entities\\accountentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C8EA43B3-5B8E-4584-A95A-5BCF4FB8A8F1}|AccountProvider\\AccountProvider.csproj|d:\\nackademin\\cms23-asp2-manero\\accountprovider\\accountprovider\\local.settings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "AbsoluteMoniker": "D:0:0:{C8EA43B3-5B8E-4584-A95A-5BCF4FB8A8F1}|AccountProvider\\AccountProvider.csproj|c:\\nackademin\\accountprovider\\accountprovider\\accountprovider\\local.settings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{C8EA43B3-5B8E-4584-A95A-5BCF4FB8A8F1}|AccountProvider\\AccountProvider.csproj|solutionrelative:accountprovider\\local.settings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C8EA43B3-5B8E-4584-A95A-5BCF4FB8A8F1}|AccountProvider\\AccountProvider.csproj|d:\\nackademin\\cms23-asp2-manero\\accountprovider\\accountprovider\\.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}",
-      "RelativeMoniker": "D:0:0:{C8EA43B3-5B8E-4584-A95A-5BCF4FB8A8F1}|AccountProvider\\AccountProvider.csproj|solutionrelative:accountprovider\\.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C8EA43B3-5B8E-4584-A95A-5BCF4FB8A8F1}|AccountProvider\\AccountProvider.csproj|d:\\nackademin\\cms23-asp2-manero\\accountprovider\\accountprovider\\host.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{C8EA43B3-5B8E-4584-A95A-5BCF4FB8A8F1}|AccountProvider\\AccountProvider.csproj|solutionrelative:accountprovider\\host.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C8EA43B3-5B8E-4584-A95A-5BCF4FB8A8F1}|AccountProvider\\AccountProvider.csproj|d:\\nackademin\\cms23-asp2-manero\\accountprovider\\accountprovider\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{C8EA43B3-5B8E-4584-A95A-5BCF4FB8A8F1}|AccountProvider\\AccountProvider.csproj|c:\\nackademin\\accountprovider\\accountprovider\\accountprovider\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C8EA43B3-5B8E-4584-A95A-5BCF4FB8A8F1}|AccountProvider\\AccountProvider.csproj|solutionrelative:accountprovider\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C8EA43B3-5B8E-4584-A95A-5BCF4FB8A8F1}|AccountProvider\\AccountProvider.csproj|d:\\nackademin\\cms23-asp2-manero\\accountprovider\\accountprovider\\data\\contexts\\context.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C8EA43B3-5B8E-4584-A95A-5BCF4FB8A8F1}|AccountProvider\\AccountProvider.csproj|solutionrelative:accountprovider\\data\\contexts\\context.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C8EA43B3-5B8E-4584-A95A-5BCF4FB8A8F1}|AccountProvider\\AccountProvider.csproj|d:\\nackademin\\cms23-asp2-manero\\accountprovider\\accountprovider\\models\\account.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C8EA43B3-5B8E-4584-A95A-5BCF4FB8A8F1}|AccountProvider\\AccountProvider.csproj|solutionrelative:accountprovider\\models\\account.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -46,123 +22,47 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{e506b91c-c606-466a-90a9-123d1d1e12b3}"
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{0174dea2-fdbe-4ef1-8f99-c0beae78880f}"
-            },
-            {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "AccountProviderId.cs",
-              "DocumentMoniker": "D:\\Nackademin\\cms23-Asp2-Manero\\AccountProvider\\AccountProvider\\Functions\\AccountProviderId.cs",
-              "RelativeDocumentMoniker": "AccountProvider\\Functions\\AccountProviderId.cs",
-              "ToolTip": "D:\\Nackademin\\cms23-Asp2-Manero\\AccountProvider\\AccountProvider\\Functions\\AccountProviderId.cs",
-              "RelativeToolTip": "AccountProvider\\Functions\\AccountProviderId.cs",
-              "ViewState": "AQIAAA4AAAAAAAAAAAAQwCEAAAAVAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-12T15:44:10.517Z",
+              "DocumentIndex": 1,
+              "Title": "local.settings.json",
+              "DocumentMoniker": "C:\\Nackademin\\AccountProvider\\AccountProvider\\AccountProvider\\local.settings.json",
+              "RelativeDocumentMoniker": "AccountProvider\\local.settings.json",
+              "ToolTip": "C:\\Nackademin\\AccountProvider\\AccountProvider\\AccountProvider\\local.settings.json",
+              "RelativeToolTip": "AccountProvider\\local.settings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAABMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-05-13T11:36:38.017Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "AccountEntity.cs",
-              "DocumentMoniker": "D:\\Nackademin\\cms23-Asp2-Manero\\AccountProvider\\AccountProvider\\Data\\Entities\\AccountEntity.cs",
-              "RelativeDocumentMoniker": "AccountProvider\\Data\\Entities\\AccountEntity.cs",
-              "ToolTip": "D:\\Nackademin\\cms23-Asp2-Manero\\AccountProvider\\AccountProvider\\Data\\Entities\\AccountEntity.cs",
-              "RelativeToolTip": "AccountProvider\\Data\\Entities\\AccountEntity.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAoAAAA",
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Nackademin\\AccountProvider\\AccountProvider\\AccountProvider\\Program.cs",
+              "RelativeDocumentMoniker": "AccountProvider\\Program.cs",
+              "ToolTip": "C:\\Nackademin\\AccountProvider\\AccountProvider\\AccountProvider\\Program.cs",
+              "RelativeToolTip": "AccountProvider\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAGAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-12T14:58:35.797Z",
+              "WhenOpened": "2024-05-12T14:11:34.072Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Account.cs",
-              "DocumentMoniker": "D:\\Nackademin\\cms23-Asp2-Manero\\AccountProvider\\AccountProvider\\Models\\Account.cs",
-              "RelativeDocumentMoniker": "AccountProvider\\Models\\Account.cs",
-              "ToolTip": "D:\\Nackademin\\cms23-Asp2-Manero\\AccountProvider\\AccountProvider\\Models\\Account.cs",
-              "RelativeToolTip": "AccountProvider\\Models\\Account.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAsAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-12T14:58:34.542Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Context.cs",
-              "DocumentMoniker": "D:\\Nackademin\\cms23-Asp2-Manero\\AccountProvider\\AccountProvider\\Data\\Contexts\\Context.cs",
-              "RelativeDocumentMoniker": "AccountProvider\\Data\\Contexts\\Context.cs",
-              "ToolTip": "D:\\Nackademin\\cms23-Asp2-Manero\\AccountProvider\\AccountProvider\\Data\\Contexts\\Context.cs",
-              "RelativeToolTip": "AccountProvider\\Data\\Contexts\\Context.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-12T14:11:48.764Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Program.cs",
-              "DocumentMoniker": "D:\\Nackademin\\cms23-Asp2-Manero\\AccountProvider\\AccountProvider\\Program.cs",
-              "RelativeDocumentMoniker": "AccountProvider\\Program.cs",
-              "ToolTip": "D:\\Nackademin\\cms23-Asp2-Manero\\AccountProvider\\AccountProvider\\Program.cs",
-              "RelativeToolTip": "AccountProvider\\Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAGAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-12T14:11:34.072Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "host.json",
-              "DocumentMoniker": "D:\\Nackademin\\cms23-Asp2-Manero\\AccountProvider\\AccountProvider\\host.json",
-              "RelativeDocumentMoniker": "AccountProvider\\host.json",
-              "ToolTip": "D:\\Nackademin\\cms23-Asp2-Manero\\AccountProvider\\AccountProvider\\host.json",
-              "RelativeToolTip": "AccountProvider\\host.json",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-05-12T13:16:33.816Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": ".gitignore",
-              "DocumentMoniker": "D:\\Nackademin\\cms23-Asp2-Manero\\AccountProvider\\AccountProvider\\.gitignore",
-              "RelativeDocumentMoniker": "AccountProvider\\.gitignore",
-              "ToolTip": "D:\\Nackademin\\cms23-Asp2-Manero\\AccountProvider\\AccountProvider\\.gitignore",
-              "RelativeToolTip": "AccountProvider\\.gitignore",
-              "ViewState": "AQIAAEgAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAF8SURBVDhPjVNLTgJBEG1lwpoFB3GNK9fieA48hD8iwT/ihwgSDAIHgAGXXsEV18CNzL/LquqZdsYM6kteXqcy3fWqpmpNRBgOhyABBEgpAFVKPIMUcYzUyOU\u002BXM/b2qtU3vkSfRjjZTCAMAw1A2LwzdFoBPP5HNqdzuL27n4juibWI\u002BUshBA1DIkhEx9iEorFotgslQqGYbxxAGFEqt1MxmPWJLbLZdZ\u002Bv89q5PMFPiTR6z2zdaxR0fXA0XTBcVywkb4fwHXjRteecIDNQ7UmExVYAdPcxYaqclN46na5WenMKjtlVnTYwcXlVYaDqImW9beD5N/TeGy32QHXm6hZ03ZgiSQHp2fnWQ4oBmJqWSqwAqZpZjt4aLXAD4J0VqyZsmoubfB8H2r1eoaD6NXZ9HcHO\u002BSA3f4AjifXl8rItOETM8ckB9WTWpYD9RdeZ1PWVWAHWXPQaDb59f/w8LiqHeh1pvGkCaP6qB8yXusoxmuNZ7XmII4O9vGuEF86osuDYRkpYQAAAABJRU5ErkJggg==",
-              "WhenOpened": "2024-05-12T13:16:27.105Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "local.settings.json",
-              "DocumentMoniker": "D:\\Nackademin\\cms23-Asp2-Manero\\AccountProvider\\AccountProvider\\local.settings.json",
-              "RelativeDocumentMoniker": "AccountProvider\\local.settings.json",
-              "ToolTip": "D:\\Nackademin\\cms23-Asp2-Manero\\AccountProvider\\AccountProvider\\local.settings.json",
-              "RelativeToolTip": "AccountProvider\\local.settings.json",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAPAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-05-12T13:16:22.049Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "AccountProvider.cs",
-              "DocumentMoniker": "D:\\Nackademin\\cms23-Asp2-Manero\\AccountProvider\\AccountProvider\\Functions\\AccountProvider.cs",
+              "DocumentMoniker": "C:\\Nackademin\\AccountProvider\\AccountProvider\\AccountProvider\\Functions\\AccountProvider.cs",
               "RelativeDocumentMoniker": "AccountProvider\\Functions\\AccountProvider.cs",
-              "ToolTip": "D:\\Nackademin\\cms23-Asp2-Manero\\AccountProvider\\AccountProvider\\Functions\\AccountProvider.cs",
+              "ToolTip": "C:\\Nackademin\\AccountProvider\\AccountProvider\\AccountProvider\\Functions\\AccountProvider.cs",
               "RelativeToolTip": "AccountProvider\\Functions\\AccountProvider.cs",
-              "ViewState": "AQIAACsAAAAAAAAAAAAgwEgAAAAyAAAA",
+              "ViewState": "AQIAAD4AAAAAAAAAAAAAAFAAAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-10T16:56:46.739Z",
               "EditorCaption": ""

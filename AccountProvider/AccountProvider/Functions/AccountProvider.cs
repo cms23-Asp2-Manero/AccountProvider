@@ -54,8 +54,7 @@ namespace AccountProvider.Functions
                     AccountEntity? account = JsonConvert.DeserializeObject<AccountEntity>(message);
                     if (account != null)
                     {
-                        AccountEntity? entity = await _context.Accounts.FirstOrDefaultAsync(x => x.UserId == account.UserId);
-                        if (entity != null)
+                        if (await _context.Accounts.AnyAsync(x => x.UserId == account.UserId))
                         {
                             _context.Update(account);
                             await _context.SaveChangesAsync();
@@ -65,12 +64,12 @@ namespace AccountProvider.Functions
                     }
                     else
                     {
-                        return new BadRequestResult();
+                        return new BadRequestObjectResult("Syntax error");
                     }
                 }
-                catch
+                catch (Exception ex)
                 {
-                    return new BadRequestResult();
+                    return new BadRequestObjectResult(ex);
                 }
                 
             }
