@@ -4,6 +4,8 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using AccountProvider.Functions;
+using AccountProvider.Interfaces;
+using AccountProvider.Repositories;
 
 var host = new HostBuilder()
     .ConfigureFunctionsWebApplication()
@@ -11,6 +13,7 @@ var host = new HostBuilder()
     {
         services.AddApplicationInsightsTelemetryWorkerService();
         services.ConfigureFunctionsApplicationInsights();
+        services.AddScoped<IAccountRepository, AccountRepository>();
         services.AddDbContext<Context>(x => x.UseSqlServer(Environment.GetEnvironmentVariable("SqlServerAccount")));
     })
     .Build();
