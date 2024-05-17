@@ -1,11 +1,8 @@
-using AccountProvider.Data.Contexts;
 using AccountProvider.Data.Entities;
 using AccountProvider.Interfaces;
-using AccountProvider.Repositories;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Azure.Functions.Worker;
-using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 
 namespace AccountProvider.Functions
