@@ -18,8 +18,7 @@ namespace AccountProvider.Functions
         [Function("Delete")]
         public async Task<IActionResult> Run([HttpTrigger(AuthorizationLevel.Function, "delete", Route = "AccountProvider/{id}")] HttpRequest req, string id)
         {
-            _logger.LogInformation("C# HTTP trigger function processed a request.");
-
+            _logger.LogInformation("Processing DELETE request to delete an Account object based on id");
             try
             {
                 bool result = await _accountRepository.DeleteAsync(id);
@@ -30,7 +29,6 @@ namespace AccountProvider.Functions
                 _logger.LogError(ex, "An exception was raised");
                 return new StatusCodeResult(StatusCodes.Status500InternalServerError);
             }
-
         }
     }
 }
