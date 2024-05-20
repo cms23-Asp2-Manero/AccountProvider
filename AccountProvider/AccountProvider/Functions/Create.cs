@@ -22,15 +22,17 @@ namespace AccountProvider.Functions
             {
                 string message = await new StreamReader(req.Body).ReadToEndAsync();
                 AccountEntity? account = JsonConvert.DeserializeObject<AccountEntity>(message);
+                
                 if (ValidModel.IsValid(account))
                 {
-                    AccountEntity entity = await _accountRepository.CreateAsync(account!);
-                    return new OkObjectResult(entity);
+                    if (!await _accountRepository.ExistsAsync(x => x.Email == account!.Email))
+                    {
+                        AccountEntity entity = await _accountRepository.CreateAsync(account!);
+                        return new OkObjectResult(entity);
+                    }
                 }
-                else
-                {
-                    return new BadRequestObjectResult(new { error = "Post request failed due to invalid data" });
-                }
+                return new BadRequestObjectResult(new { error = "Post request failed due to invalid data" });
+                
             }
             catch (Exception ex)
             {

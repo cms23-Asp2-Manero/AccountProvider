@@ -24,17 +24,18 @@ namespace AccountProvider.Functions
                 AccountEntity? account = JsonConvert.DeserializeObject<AccountEntity>(message);
                 if (ValidModel.IsValid(account))
                 {
-                    if (await _accountRepository.ExistsAsync(x => x.UserId == account!.UserId))
+                    if (await _accountRepository.ExistsAsync(x => x.Email != account!.Email))
                     {
-                        AccountEntity modifiedEntity = await _accountRepository.UpdateAsync(account!);
-                        return new OkObjectResult(modifiedEntity);
+                        if (await _accountRepository.ExistsAsync(x => x.UserId == account!.UserId))
+                        {   
+                            AccountEntity modifiedEntity = await _accountRepository.UpdateAsync(account!);
+                            return new OkObjectResult(modifiedEntity);
+                        }
+                        return new NotFoundObjectResult(new { error = "No object found" });
                     }
-                    return new NotFoundObjectResult(new { error = "No object found" });
                 }
-                else
-                {
-                    return new BadRequestObjectResult(new { error = "Put request failed due to invalid data" });
-                }
+                return new BadRequestObjectResult(new { error = "Put request failed due to invalid data" });
+                
             }
             catch (Exception ex)
             {
