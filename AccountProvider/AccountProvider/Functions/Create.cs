@@ -1,6 +1,9 @@
+using System;
+using System.Threading.Tasks;
 using AccountProvider.Data.Entities;
 using AccountProvider.Helpers;
-using AccountProvider.Interfaces;
+using AccountProvider.Repositories;
+using Azure.Messaging.ServiceBus;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Azure.Functions.Worker;
@@ -9,35 +12,47 @@ using Newtonsoft.Json;
 
 namespace AccountProvider.Functions
 {
-    public class Create(ILogger<Create> logger, IAccountRepository accountRepository)
+    public class Create
     {
-        private readonly ILogger<Create> _logger = logger;
-        private readonly IAccountRepository _accountRepository = accountRepository;
+        private readonly ILogger<Create> _logger;
+        private readonly AccountRepository _accountRepository;
+        private readonly ServiceBusClient _client;
+        private ServiceBusSender _verificationSender;
+        private ServiceBusSender _accountSender;
 
-        [Function("Create")]
-        public async Task<IActionResult> Run([HttpTrigger(AuthorizationLevel.Function, "post", Route = "AccountProvider")] HttpRequest req)
+        public Create(ILogger<Create> logger, AccountRepository accountRepository, ServiceBusClient client)
         {
-            _logger.LogInformation("Processing POST request to Create an Account object");
+            _logger = logger;
+            _accountRepository = accountRepository;
+            _client = new ServiceBusClient(Environment.GetEnvironmentVariable("ServiceBus"));
+            _accountSender = _client.CreateSender("create_account_request");
+        }
+
+        [Function(nameof(Create))]
+        public async Task Run([ServiceBusTrigger("create_account_request", Connection = "ServiceBus")] ServiceBusReceivedMessage message, ServiceBusMessageActions messageActions)
+        {
+            _logger.LogInformation("Message ID: {id}", message.MessageId);
+            _logger.LogInformation("Message Body: {body}", message.Body);
+            _logger.LogInformation("Message Content-Type: {contentType}", message.ContentType);
+
             try
             {
-                string message = await new StreamReader(req.Body).ReadToEndAsync();
-                AccountEntity? account = JsonConvert.DeserializeObject<AccountEntity>(message);
-                
+                AccountEntity? account = JsonConvert.DeserializeObject<AccountEntity>(message.Body.ToString());
+
                 if (ValidModel.IsValid(account))
                 {
                     if (!await _accountRepository.ExistsAsync(x => x.Email == account!.Email))
                     {
                         AccountEntity entity = await _accountRepository.CreateAsync(account!);
-                        return new OkObjectResult(entity);
+                        await messageActions.CompleteMessageAsync(message);
                     }
+                    await messageActions.DeadLetterMessageAsync(message, null, "already exists");
                 }
-                return new BadRequestObjectResult(new { error = "Post request failed due to invalid data" });
-                
+                await messageActions.DeadLetterMessageAsync(message, null, "letter failed due to invalid data");
             }
             catch (Exception ex)
             {
                 _logger.LogError(ex, "An exception was raised");
-                return new StatusCodeResult(StatusCodes.Status500InternalServerError);
             }
         }
     }
