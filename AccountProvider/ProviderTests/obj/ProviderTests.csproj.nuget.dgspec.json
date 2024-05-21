@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Nackademin\\AccountProvider\\AccountProvider\\ProviderTests\\ProviderTests.csproj": {}
+    "D:\\nackademin\\cms23-Asp2-Manero\\AccountProvider\\AccountProvider\\ProviderTests\\ProviderTests.csproj": {}
   },
   "projects": {
-    "C:\\Nackademin\\AccountProvider\\AccountProvider\\AccountProvider\\AccountProvider.csproj": {
+    "D:\\nackademin\\cms23-Asp2-Manero\\AccountProvider\\AccountProvider\\AccountProvider\\AccountProvider.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Nackademin\\AccountProvider\\AccountProvider\\AccountProvider\\AccountProvider.csproj",
+        "projectUniqueName": "D:\\nackademin\\cms23-Asp2-Manero\\AccountProvider\\AccountProvider\\AccountProvider\\AccountProvider.csproj",
         "projectName": "AccountProvider",
-        "projectPath": "C:\\Nackademin\\AccountProvider\\AccountProvider\\AccountProvider\\AccountProvider.csproj",
-        "packagesPath": "C:\\Users\\hugoe\\.nuget\\packages\\",
-        "outputPath": "C:\\Nackademin\\AccountProvider\\AccountProvider\\AccountProvider\\obj\\",
+        "projectPath": "D:\\nackademin\\cms23-Asp2-Manero\\AccountProvider\\AccountProvider\\AccountProvider\\AccountProvider.csproj",
+        "packagesPath": "C:\\Users\\Andro\\.nuget\\packages\\",
+        "outputPath": "D:\\nackademin\\cms23-Asp2-Manero\\AccountProvider\\AccountProvider\\AccountProvider\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\hugoe\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Andro\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -52,59 +52,63 @@
           "dependencies": {
             "Azure.Storage.Blobs": {
               "target": "Package",
-              "version": "[12.13.1, )"
+              "version": "[12.20.0, )"
             },
             "Azure.Storage.Files.Shares": {
               "target": "Package",
-              "version": "[12.1.0, )"
+              "version": "[12.18.0, )"
             },
             "Azure.Storage.Queues": {
               "target": "Package",
-              "version": "[12.11.1, )"
+              "version": "[12.18.0, )"
             },
             "Microsoft.ApplicationInsights.WorkerService": {
               "target": "Package",
-              "version": "[2.21.0, )"
+              "version": "[2.22.0, )"
             },
             "Microsoft.Azure.Functions.Worker": {
               "target": "Package",
-              "version": "[1.20.1, )"
+              "version": "[1.22.0, )"
             },
             "Microsoft.Azure.Functions.Worker.ApplicationInsights": {
               "target": "Package",
-              "version": "[1.1.0, )"
+              "version": "[1.2.0, )"
             },
             "Microsoft.Azure.Functions.Worker.Extensions.Http": {
               "target": "Package",
-              "version": "[3.1.0, )"
+              "version": "[3.2.0, )"
             },
             "Microsoft.Azure.Functions.Worker.Extensions.Http.AspNetCore": {
               "target": "Package",
-              "version": "[1.2.0, )"
+              "version": "[1.2.1, )"
+            },
+            "Microsoft.Azure.Functions.Worker.Extensions.ServiceBus": {
+              "target": "Package",
+              "version": "[5.18.0, )"
             },
             "Microsoft.Azure.Functions.Worker.Sdk": {
               "target": "Package",
-              "version": "[1.16.4, )"
+              "version": "[1.17.2, )"
             },
             "Microsoft.EntityFrameworkCore.Design": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[8.0.4, )"
+              "version": "[8.0.5, )"
             },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
-              "version": "[8.0.4, )"
+              "version": "[8.0.5, )"
             },
             "Microsoft.EntityFrameworkCore.Tools": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[8.0.4, )"
+              "version": "[8.0.5, )"
             },
             "Microsoft.Extensions.Azure": {
               "target": "Package",
-              "version": "[1.5.0, )"
+              "version": "[1.7.3, )"
             },
             "Newtonsoft.Json": {
               "target": "Package",
@@ -134,24 +138,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Nackademin\\AccountProvider\\AccountProvider\\ProviderTests\\ProviderTests.csproj": {
+    "D:\\nackademin\\cms23-Asp2-Manero\\AccountProvider\\AccountProvider\\ProviderTests\\ProviderTests.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Nackademin\\AccountProvider\\AccountProvider\\ProviderTests\\ProviderTests.csproj",
+        "projectUniqueName": "D:\\nackademin\\cms23-Asp2-Manero\\AccountProvider\\AccountProvider\\ProviderTests\\ProviderTests.csproj",
         "projectName": "ProviderTests",
-        "projectPath": "C:\\Nackademin\\AccountProvider\\AccountProvider\\ProviderTests\\ProviderTests.csproj",
-        "packagesPath": "C:\\Users\\hugoe\\.nuget\\packages\\",
-        "outputPath": "C:\\Nackademin\\AccountProvider\\AccountProvider\\ProviderTests\\obj\\",
+        "projectPath": "D:\\nackademin\\cms23-Asp2-Manero\\AccountProvider\\AccountProvider\\ProviderTests\\ProviderTests.csproj",
+        "packagesPath": "C:\\Users\\Andro\\.nuget\\packages\\",
+        "outputPath": "D:\\nackademin\\cms23-Asp2-Manero\\AccountProvider\\AccountProvider\\ProviderTests\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\hugoe\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Andro\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -167,8 +171,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Nackademin\\AccountProvider\\AccountProvider\\AccountProvider\\AccountProvider.csproj": {
-                "projectPath": "C:\\Nackademin\\AccountProvider\\AccountProvider\\AccountProvider\\AccountProvider.csproj"
+              "D:\\nackademin\\cms23-Asp2-Manero\\AccountProvider\\AccountProvider\\AccountProvider\\AccountProvider.csproj": {
+                "projectPath": "D:\\nackademin\\cms23-Asp2-Manero\\AccountProvider\\AccountProvider\\AccountProvider\\AccountProvider.csproj"
               }
             }
           }
@@ -188,9 +192,17 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "Microsoft.EntityFrameworkCore.InMemory": {
+              "target": "Package",
+              "version": "[8.0.5, )"
+            },
             "Microsoft.NET.Test.Sdk": {
               "target": "Package",
               "version": "[17.8.0, )"
+            },
+            "Moq": {
+              "target": "Package",
+              "version": "[4.20.70, )"
             },
             "coverlet.collector": {
               "target": "Package",
@@ -221,7 +233,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

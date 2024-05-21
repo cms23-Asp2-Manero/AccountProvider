@@ -2,10 +2,11 @@
   "version": 3,
   "targets": {
     "net8.0": {
-      "Azure.Core/1.35.0": {
+      "Azure.Core/1.39.0": {
         "type": "package",
         "dependencies": {
           "Microsoft.Bcl.AsyncInterfaces": "1.1.1",
+          "System.ClientModel": "1.0.0",
           "System.Diagnostics.DiagnosticSource": "6.0.1",
           "System.Memory.Data": "1.0.2",
           "System.Numerics.Vectors": "4.5.0",
@@ -24,12 +25,30 @@
           }
         }
       },
-      "Azure.Identity/1.10.3": {
+      "Azure.Core.Amqp/1.3.0": {
         "type": "package",
         "dependencies": {
-          "Azure.Core": "1.35.0",
-          "Microsoft.Identity.Client": "4.56.0",
-          "Microsoft.Identity.Client.Extensions.Msal": "4.56.0",
+          "Microsoft.Azure.Amqp": "2.6.1",
+          "System.Memory": "4.5.4",
+          "System.Memory.Data": "1.0.2"
+        },
+        "compile": {
+          "lib/netstandard2.0/Azure.Core.Amqp.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Azure.Core.Amqp.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Azure.Identity/1.11.2": {
+        "type": "package",
+        "dependencies": {
+          "Azure.Core": "1.38.0",
+          "Microsoft.Identity.Client": "4.60.3",
+          "Microsoft.Identity.Client.Extensions.Msal": "4.60.3",
           "System.Memory": "4.5.4",
           "System.Security.Cryptography.ProtectedData": "4.7.0",
           "System.Text.Json": "4.7.2",
@@ -46,72 +65,107 @@
           }
         }
       },
-      "Azure.Storage.Blobs/12.13.1": {
+      "Azure.Messaging.ServiceBus/7.17.5": {
         "type": "package",
         "dependencies": {
-          "Azure.Storage.Common": "12.12.0",
+          "Azure.Core": "1.38.0",
+          "Azure.Core.Amqp": "1.3.0",
+          "Microsoft.Azure.Amqp": "2.6.5",
+          "Microsoft.Bcl.AsyncInterfaces": "1.1.1",
+          "System.Memory.Data": "1.0.2"
+        },
+        "compile": {
+          "lib/netstandard2.0/Azure.Messaging.ServiceBus.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Azure.Messaging.ServiceBus.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Azure.Storage.Blobs/12.20.0": {
+        "type": "package",
+        "dependencies": {
+          "Azure.Storage.Common": "12.19.0",
           "System.Text.Json": "4.7.2"
         },
         "compile": {
-          "lib/netstandard2.1/Azure.Storage.Blobs.dll": {
+          "lib/net6.0/Azure.Storage.Blobs.dll": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/netstandard2.1/Azure.Storage.Blobs.dll": {
+          "lib/net6.0/Azure.Storage.Blobs.dll": {
             "related": ".xml"
           }
         }
       },
-      "Azure.Storage.Common/12.12.0": {
+      "Azure.Storage.Common/12.19.0": {
         "type": "package",
         "dependencies": {
-          "Azure.Core": "1.25.0",
+          "Azure.Core": "1.39.0",
           "System.IO.Hashing": "6.0.0"
         },
         "compile": {
-          "lib/netstandard2.0/Azure.Storage.Common.dll": {
+          "lib/net6.0/Azure.Storage.Common.dll": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/netstandard2.0/Azure.Storage.Common.dll": {
+          "lib/net6.0/Azure.Storage.Common.dll": {
             "related": ".xml"
           }
         }
       },
-      "Azure.Storage.Files.Shares/12.1.0": {
+      "Azure.Storage.Files.Shares/12.18.0": {
         "type": "package",
         "dependencies": {
-          "Azure.Core": "1.0.2",
-          "Azure.Storage.Common": "12.2.0",
-          "System.Text.Json": "4.6.0"
+          "Azure.Storage.Common": "12.19.0",
+          "System.Text.Json": "4.7.2"
         },
         "compile": {
-          "lib/netstandard2.0/Azure.Storage.Files.Shares.dll": {
+          "lib/net6.0/Azure.Storage.Files.Shares.dll": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/netstandard2.0/Azure.Storage.Files.Shares.dll": {
+          "lib/net6.0/Azure.Storage.Files.Shares.dll": {
             "related": ".xml"
           }
         }
       },
-      "Azure.Storage.Queues/12.11.1": {
+      "Azure.Storage.Queues/12.18.0": {
         "type": "package",
         "dependencies": {
-          "Azure.Storage.Common": "12.12.0",
+          "Azure.Storage.Common": "12.19.0",
           "System.Memory.Data": "1.0.2",
           "System.Text.Json": "4.7.2"
         },
         "compile": {
-          "lib/netstandard2.1/Azure.Storage.Queues.dll": {
+          "lib/net6.0/Azure.Storage.Queues.dll": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/netstandard2.1/Azure.Storage.Queues.dll": {
+          "lib/net6.0/Azure.Storage.Queues.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Castle.Core/5.1.1": {
+        "type": "package",
+        "dependencies": {
+          "System.Diagnostics.EventLog": "6.0.0"
+        },
+        "compile": {
+          "lib/net6.0/Castle.Core.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Castle.Core.dll": {
             "related": ".xml"
           }
         }
@@ -122,7 +176,7 @@
           "build/netstandard1.0/coverlet.collector.targets": {}
         }
       },
-      "Google.Protobuf/3.23.3": {
+      "Google.Protobuf/3.25.2": {
         "type": "package",
         "compile": {
           "lib/net5.0/Google.Protobuf.dll": {
@@ -135,11 +189,8 @@
           }
         }
       },
-      "Grpc.Core.Api/2.55.0": {
+      "Grpc.Core.Api/2.60.0": {
         "type": "package",
-        "dependencies": {
-          "System.Memory": "4.5.3"
-        },
         "compile": {
           "lib/netstandard2.1/Grpc.Core.Api.dll": {
             "related": ".pdb;.xml"
@@ -151,57 +202,57 @@
           }
         }
       },
-      "Grpc.Net.Client/2.55.0": {
+      "Grpc.Net.Client/2.60.0": {
         "type": "package",
         "dependencies": {
-          "Grpc.Net.Common": "2.55.0",
-          "Microsoft.Extensions.Logging.Abstractions": "3.0.3"
+          "Grpc.Net.Common": "2.60.0",
+          "Microsoft.Extensions.Logging.Abstractions": "6.0.0"
         },
         "compile": {
-          "lib/net7.0/Grpc.Net.Client.dll": {
+          "lib/net8.0/Grpc.Net.Client.dll": {
             "related": ".pdb;.xml"
           }
         },
         "runtime": {
-          "lib/net7.0/Grpc.Net.Client.dll": {
+          "lib/net8.0/Grpc.Net.Client.dll": {
             "related": ".pdb;.xml"
           }
         }
       },
-      "Grpc.Net.ClientFactory/2.55.0": {
+      "Grpc.Net.ClientFactory/2.60.0": {
         "type": "package",
         "dependencies": {
-          "Grpc.Net.Client": "2.55.0",
-          "Microsoft.Extensions.Http": "3.0.3"
+          "Grpc.Net.Client": "2.60.0",
+          "Microsoft.Extensions.Http": "6.0.0"
         },
         "compile": {
-          "lib/net7.0/Grpc.Net.ClientFactory.dll": {
+          "lib/net8.0/Grpc.Net.ClientFactory.dll": {
             "related": ".pdb;.xml"
           }
         },
         "runtime": {
-          "lib/net7.0/Grpc.Net.ClientFactory.dll": {
+          "lib/net8.0/Grpc.Net.ClientFactory.dll": {
             "related": ".pdb;.xml"
           }
         }
       },
-      "Grpc.Net.Common/2.55.0": {
+      "Grpc.Net.Common/2.60.0": {
         "type": "package",
         "dependencies": {
-          "Grpc.Core.Api": "2.55.0"
+          "Grpc.Core.Api": "2.60.0"
         },
         "compile": {
-          "lib/net7.0/Grpc.Net.Common.dll": {
+          "lib/net8.0/Grpc.Net.Common.dll": {
             "related": ".pdb;.xml"
           }
         },
         "runtime": {
-          "lib/net7.0/Grpc.Net.Common.dll": {
+          "lib/net8.0/Grpc.Net.Common.dll": {
             "related": ".pdb;.xml"
           }
         }
       },
-      "Microsoft.ApplicationInsights/2.21.0": {
+      "Microsoft.ApplicationInsights/2.22.0": {
         "type": "package",
         "dependencies": {
           "System.Diagnostics.DiagnosticSource": "5.0.0"
@@ -217,10 +268,10 @@
           }
         }
       },
-      "Microsoft.ApplicationInsights.DependencyCollector/2.21.0": {
+      "Microsoft.ApplicationInsights.DependencyCollector/2.22.0": {
         "type": "package",
         "dependencies": {
-          "Microsoft.ApplicationInsights": "2.21.0",
+          "Microsoft.ApplicationInsights": "2.22.0",
           "System.Diagnostics.DiagnosticSource": "5.0.0"
         },
         "compile": {
@@ -237,10 +288,10 @@
           "build/_._": {}
         }
       },
-      "Microsoft.ApplicationInsights.EventCounterCollector/2.21.0": {
+      "Microsoft.ApplicationInsights.EventCounterCollector/2.22.0": {
         "type": "package",
         "dependencies": {
-          "Microsoft.ApplicationInsights": "2.21.0"
+          "Microsoft.ApplicationInsights": "2.22.0"
         },
         "compile": {
           "lib/netstandard2.0/Microsoft.AI.EventCounterCollector.dll": {
@@ -253,12 +304,12 @@
           }
         }
       },
-      "Microsoft.ApplicationInsights.PerfCounterCollector/2.21.0": {
+      "Microsoft.ApplicationInsights.PerfCounterCollector/2.22.0": {
         "type": "package",
         "dependencies": {
-          "Microsoft.ApplicationInsights": "2.21.0",
+          "Microsoft.ApplicationInsights": "2.22.0",
           "Microsoft.Extensions.Caching.Memory": "1.0.0",
-          "System.Diagnostics.PerformanceCounter": "4.7.0"
+          "System.Diagnostics.PerformanceCounter": "6.0.0"
         },
         "compile": {
           "lib/netstandard2.0/Microsoft.AI.PerfCounterCollector.dll": {
@@ -274,13 +325,13 @@
           "build/_._": {}
         }
       },
-      "Microsoft.ApplicationInsights.WindowsServer/2.21.0": {
+      "Microsoft.ApplicationInsights.WindowsServer/2.22.0": {
         "type": "package",
         "dependencies": {
-          "Microsoft.ApplicationInsights": "2.21.0",
-          "Microsoft.ApplicationInsights.DependencyCollector": "2.21.0",
-          "Microsoft.ApplicationInsights.PerfCounterCollector": "2.21.0",
-          "Microsoft.ApplicationInsights.WindowsServer.TelemetryChannel": "2.21.0",
+          "Microsoft.ApplicationInsights": "2.22.0",
+          "Microsoft.ApplicationInsights.DependencyCollector": "2.22.0",
+          "Microsoft.ApplicationInsights.PerfCounterCollector": "2.22.0",
+          "Microsoft.ApplicationInsights.WindowsServer.TelemetryChannel": "2.22.0",
           "System.Diagnostics.DiagnosticSource": "5.0.0"
         },
         "compile": {
@@ -297,10 +348,10 @@
           "build/_._": {}
         }
       },
-      "Microsoft.ApplicationInsights.WindowsServer.TelemetryChannel/2.21.0": {
+      "Microsoft.ApplicationInsights.WindowsServer.TelemetryChannel/2.22.0": {
         "type": "package",
         "dependencies": {
-          "Microsoft.ApplicationInsights": "2.21.0",
+          "Microsoft.ApplicationInsights": "2.22.0",
           "System.IO.FileSystem.AccessControl": "4.7.0"
         },
         "compile": {
@@ -317,17 +368,17 @@
           "build/_._": {}
         }
       },
-      "Microsoft.ApplicationInsights.WorkerService/2.21.0": {
+      "Microsoft.ApplicationInsights.WorkerService/2.22.0": {
         "type": "package",
         "dependencies": {
-          "Microsoft.ApplicationInsights": "2.21.0",
-          "Microsoft.ApplicationInsights.DependencyCollector": "2.21.0",
-          "Microsoft.ApplicationInsights.EventCounterCollector": "2.21.0",
-          "Microsoft.ApplicationInsights.PerfCounterCollector": "2.21.0",
-          "Microsoft.ApplicationInsights.WindowsServer": "2.21.0",
-          "Microsoft.ApplicationInsights.WindowsServer.TelemetryChannel": "2.21.0",
+          "Microsoft.ApplicationInsights": "2.22.0",
+          "Microsoft.ApplicationInsights.DependencyCollector": "2.22.0",
+          "Microsoft.ApplicationInsights.EventCounterCollector": "2.22.0",
+          "Microsoft.ApplicationInsights.PerfCounterCollector": "2.22.0",
+          "Microsoft.ApplicationInsights.WindowsServer": "2.22.0",
+          "Microsoft.ApplicationInsights.WindowsServer.TelemetryChannel": "2.22.0",
           "Microsoft.Extensions.DependencyInjection": "2.1.1",
-          "Microsoft.Extensions.Logging.ApplicationInsights": "2.21.0"
+          "Microsoft.Extensions.Logging.ApplicationInsights": "2.22.0"
         },
         "compile": {
           "lib/netstandard2.0/Microsoft.ApplicationInsights.WorkerService.dll": {
@@ -340,12 +391,25 @@
           }
         }
       },
-      "Microsoft.Azure.Functions.Worker/1.20.1": {
+      "Microsoft.Azure.Amqp/2.6.5": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Azure.Amqp.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Azure.Amqp.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Microsoft.Azure.Functions.Worker/1.22.0": {
         "type": "package",
         "dependencies": {
-          "Azure.Core": "1.10.0",
-          "Microsoft.Azure.Functions.Worker.Core": "1.16.1",
-          "Microsoft.Azure.Functions.Worker.Grpc": "1.15.0",
+          "Azure.Core": "1.37.0",
+          "Microsoft.Azure.Functions.Worker.Core": "1.18.0",
+          "Microsoft.Azure.Functions.Worker.Grpc": "1.16.0",
           "Microsoft.Extensions.Hosting": "5.0.0",
           "Microsoft.Extensions.Hosting.Abstractions": "5.0.0"
         },
@@ -360,11 +424,11 @@
           }
         }
       },
-      "Microsoft.Azure.Functions.Worker.ApplicationInsights/1.1.0": {
+      "Microsoft.Azure.Functions.Worker.ApplicationInsights/1.2.0": {
         "type": "package",
         "dependencies": {
-          "Microsoft.ApplicationInsights.PerfCounterCollector": "2.21.0",
-          "Microsoft.Azure.Functions.Worker.Core": "1.15.0",
+          "Microsoft.ApplicationInsights.PerfCounterCollector": "2.22.0",
+          "Microsoft.Azure.Functions.Worker.Core": "1.17.0",
           "Microsoft.Bcl.AsyncInterfaces": "5.0.0"
         },
         "compile": {
@@ -374,10 +438,10 @@
           "lib/netstandard2.0/Microsoft.Azure.Functions.Worker.ApplicationInsights.dll": {}
         }
       },
-      "Microsoft.Azure.Functions.Worker.Core/1.16.1": {
+      "Microsoft.Azure.Functions.Worker.Core/1.18.0": {
         "type": "package",
         "dependencies": {
-          "Azure.Core": "1.10.0",
+          "Azure.Core": "1.37.0",
           "Microsoft.Extensions.Hosting": "5.0.0",
           "Microsoft.Extensions.Hosting.Abstractions": "5.0.0",
           "System.Collections.Immutable": "5.0.0",
@@ -403,10 +467,10 @@
           "lib/netstandard2.0/Microsoft.Azure.Functions.Worker.Extensions.Abstractions.dll": {}
         }
       },
-      "Microsoft.Azure.Functions.Worker.Extensions.Http/3.1.0": {
+      "Microsoft.Azure.Functions.Worker.Extensions.Http/3.2.0": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Azure.Functions.Worker.Core": "1.15.0",
+          "Microsoft.Azure.Functions.Worker.Core": "1.18.0",
           "Microsoft.Azure.Functions.Worker.Extensions.Abstractions": "1.3.0"
         },
         "compile": {
@@ -420,13 +484,13 @@
           }
         }
       },
-      "Microsoft.Azure.Functions.Worker.Extensions.Http.AspNetCore/1.2.0": {
+      "Microsoft.Azure.Functions.Worker.Extensions.Http.AspNetCore/1.2.1": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Azure.Functions.Worker": "1.20.1",
+          "Microsoft.Azure.Functions.Worker": "1.21.0",
           "Microsoft.Azure.Functions.Worker.Extensions.Abstractions": "1.3.0",
           "Microsoft.Azure.Functions.Worker.Extensions.Http": "3.1.0",
-          "Microsoft.Azure.Functions.Worker.Extensions.Http.AspNetCore.Analyzers": "1.0.1"
+          "Microsoft.Azure.Functions.Worker.Extensions.Http.AspNetCore.Analyzers": "1.0.2"
         },
         "compile": {
           "lib/net6.0/Microsoft.Azure.Functions.Worker.Extensions.Http.AspNetCore.dll": {
@@ -442,17 +506,54 @@
           "Microsoft.AspNetCore.App"
         ]
       },
-      "Microsoft.Azure.Functions.Worker.Extensions.Http.AspNetCore.Analyzers/1.0.1": {
+      "Microsoft.Azure.Functions.Worker.Extensions.Http.AspNetCore.Analyzers/1.0.2": {
         "type": "package"
       },
-      "Microsoft.Azure.Functions.Worker.Grpc/1.15.0": {
+      "Microsoft.Azure.Functions.Worker.Extensions.Rpc/1.0.0": {
         "type": "package",
         "dependencies": {
-          "Azure.Core": "1.10.0",
-          "Google.Protobuf": "3.23.3",
           "Grpc.Net.Client": "2.55.0",
           "Grpc.Net.ClientFactory": "2.55.0",
-          "Microsoft.Azure.Functions.Worker.Core": "1.16.0",
+          "Microsoft.Azure.Functions.Worker.Core": "1.15.0",
+          "Microsoft.Azure.Functions.Worker.Extensions.Abstractions": "1.3.0"
+        },
+        "compile": {
+          "lib/net6.0/Microsoft.Azure.Functions.Worker.Extensions.Rpc.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Microsoft.Azure.Functions.Worker.Extensions.Rpc.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Microsoft.Azure.Functions.Worker.Extensions.ServiceBus/5.18.0": {
+        "type": "package",
+        "dependencies": {
+          "Azure.Identity": "1.11.2",
+          "Azure.Messaging.ServiceBus": "7.17.5",
+          "Google.Protobuf": "3.25.2",
+          "Microsoft.Azure.Functions.Worker.Core": "1.18.0",
+          "Microsoft.Azure.Functions.Worker.Extensions.Abstractions": "1.3.0",
+          "Microsoft.Azure.Functions.Worker.Extensions.Rpc": "1.0.0",
+          "Microsoft.Extensions.Azure": "1.7.3"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Azure.Functions.Worker.Extensions.ServiceBus.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Azure.Functions.Worker.Extensions.ServiceBus.dll": {}
+        }
+      },
+      "Microsoft.Azure.Functions.Worker.Grpc/1.16.0": {
+        "type": "package",
+        "dependencies": {
+          "Azure.Core": "1.37.0",
+          "Google.Protobuf": "3.25.2",
+          "Grpc.Net.Client": "2.60.0",
+          "Grpc.Net.ClientFactory": "2.60.0",
+          "Microsoft.Azure.Functions.Worker.Core": "1.17.0",
           "Microsoft.Azure.Functions.Worker.Extensions.Abstractions": "1.3.0",
           "Microsoft.Extensions.Hosting": "5.0.0",
           "Microsoft.Extensions.Hosting.Abstractions": "5.0.0"
@@ -468,11 +569,11 @@
           }
         }
       },
-      "Microsoft.Azure.Functions.Worker.Sdk/1.16.4": {
+      "Microsoft.Azure.Functions.Worker.Sdk/1.17.2": {
         "type": "package",
         "dependencies": {
           "Microsoft.Azure.Functions.Worker.Sdk.Analyzers": "1.2.1",
-          "Microsoft.Azure.Functions.Worker.Sdk.Generators": "1.1.6"
+          "Microsoft.Azure.Functions.Worker.Sdk.Generators": "1.2.1"
         },
         "build": {
           "build/_._": {}
@@ -481,7 +582,7 @@
       "Microsoft.Azure.Functions.Worker.Sdk.Analyzers/1.2.1": {
         "type": "package"
       },
-      "Microsoft.Azure.Functions.Worker.Sdk.Generators/1.1.6": {
+      "Microsoft.Azure.Functions.Worker.Sdk.Generators/1.2.1": {
         "type": "package"
       },
       "Microsoft.Bcl.AsyncInterfaces/5.0.0": {
@@ -578,11 +679,11 @@
           }
         }
       },
-      "Microsoft.EntityFrameworkCore/8.0.4": {
+      "Microsoft.EntityFrameworkCore/8.0.5": {
         "type": "package",
         "dependencies": {
-          "Microsoft.EntityFrameworkCore.Abstractions": "8.0.4",
-          "Microsoft.EntityFrameworkCore.Analyzers": "8.0.4",
+          "Microsoft.EntityFrameworkCore.Abstractions": "8.0.5",
+          "Microsoft.EntityFrameworkCore.Analyzers": "8.0.5",
           "Microsoft.Extensions.Caching.Memory": "8.0.0",
           "Microsoft.Extensions.Logging": "8.0.0"
         },
@@ -600,7 +701,7 @@
           "buildTransitive/net8.0/Microsoft.EntityFrameworkCore.props": {}
         }
       },
-      "Microsoft.EntityFrameworkCore.Abstractions/8.0.4": {
+      "Microsoft.EntityFrameworkCore.Abstractions/8.0.5": {
         "type": "package",
         "compile": {
           "lib/net8.0/Microsoft.EntityFrameworkCore.Abstractions.dll": {
@@ -613,7 +714,7 @@
           }
         }
       },
-      "Microsoft.EntityFrameworkCore.Analyzers/8.0.4": {
+      "Microsoft.EntityFrameworkCore.Analyzers/8.0.5": {
         "type": "package",
         "compile": {
           "lib/netstandard2.0/_._": {}
@@ -622,10 +723,26 @@
           "lib/netstandard2.0/_._": {}
         }
       },
-      "Microsoft.EntityFrameworkCore.Relational/8.0.4": {
+      "Microsoft.EntityFrameworkCore.InMemory/8.0.5": {
         "type": "package",
         "dependencies": {
-          "Microsoft.EntityFrameworkCore": "8.0.4",
+          "Microsoft.EntityFrameworkCore": "8.0.5"
+        },
+        "compile": {
+          "lib/net8.0/Microsoft.EntityFrameworkCore.InMemory.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/Microsoft.EntityFrameworkCore.InMemory.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Microsoft.EntityFrameworkCore.Relational/8.0.5": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "8.0.5",
           "Microsoft.Extensions.Configuration.Abstractions": "8.0.0"
         },
         "compile": {
@@ -639,11 +756,11 @@
           }
         }
       },
-      "Microsoft.EntityFrameworkCore.SqlServer/8.0.4": {
+      "Microsoft.EntityFrameworkCore.SqlServer/8.0.5": {
         "type": "package",
         "dependencies": {
           "Microsoft.Data.SqlClient": "5.1.5",
-          "Microsoft.EntityFrameworkCore.Relational": "8.0.4"
+          "Microsoft.EntityFrameworkCore.Relational": "8.0.5"
         },
         "compile": {
           "lib/net8.0/Microsoft.EntityFrameworkCore.SqlServer.dll": {
@@ -656,11 +773,11 @@
           }
         }
       },
-      "Microsoft.Extensions.Azure/1.5.0": {
+      "Microsoft.Extensions.Azure/1.7.3": {
         "type": "package",
         "dependencies": {
-          "Azure.Core": "1.25.0",
-          "Azure.Identity": "1.6.0",
+          "Azure.Core": "1.38.0",
+          "Azure.Identity": "1.11.0",
           "Microsoft.Extensions.Configuration.Abstractions": "2.1.0",
           "Microsoft.Extensions.Configuration.Binder": "2.1.0",
           "Microsoft.Extensions.DependencyInjection.Abstractions": "2.1.0",
@@ -1003,20 +1120,21 @@
           }
         }
       },
-      "Microsoft.Extensions.Http/3.0.3": {
+      "Microsoft.Extensions.Http/6.0.0": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Extensions.DependencyInjection.Abstractions": "3.0.3",
-          "Microsoft.Extensions.Logging": "3.0.3",
-          "Microsoft.Extensions.Options": "3.0.3"
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "6.0.0",
+          "Microsoft.Extensions.Logging": "6.0.0",
+          "Microsoft.Extensions.Logging.Abstractions": "6.0.0",
+          "Microsoft.Extensions.Options": "6.0.0"
         },
         "compile": {
-          "lib/netcoreapp3.0/Microsoft.Extensions.Http.dll": {
+          "lib/netstandard2.0/Microsoft.Extensions.Http.dll": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/netcoreapp3.0/Microsoft.Extensions.Http.dll": {
+          "lib/netstandard2.0/Microsoft.Extensions.Http.dll": {
             "related": ".xml"
           }
         }
@@ -1061,10 +1179,10 @@
           "buildTransitive/net6.0/Microsoft.Extensions.Logging.Abstractions.targets": {}
         }
       },
-      "Microsoft.Extensions.Logging.ApplicationInsights/2.21.0": {
+      "Microsoft.Extensions.Logging.ApplicationInsights/2.22.0": {
         "type": "package",
         "dependencies": {
-          "Microsoft.ApplicationInsights": "2.21.0",
+          "Microsoft.ApplicationInsights": "2.22.0",
           "Microsoft.Extensions.Logging": "2.1.1"
         },
         "compile": {
@@ -1237,10 +1355,11 @@
           "buildTransitive/net6.0/_._": {}
         }
       },
-      "Microsoft.Identity.Client/4.56.0": {
+      "Microsoft.Identity.Client/4.60.3": {
         "type": "package",
         "dependencies": {
-          "Microsoft.IdentityModel.Abstractions": "6.22.0"
+          "Microsoft.IdentityModel.Abstractions": "6.35.0",
+          "System.Diagnostics.DiagnosticSource": "6.0.1"
         },
         "compile": {
           "lib/net6.0/Microsoft.Identity.Client.dll": {
@@ -1253,20 +1372,19 @@
           }
         }
       },
-      "Microsoft.Identity.Client.Extensions.Msal/4.56.0": {
+      "Microsoft.Identity.Client.Extensions.Msal/4.60.3": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Identity.Client": "4.56.0",
-          "System.IO.FileSystem.AccessControl": "5.0.0",
+          "Microsoft.Identity.Client": "4.60.3",
           "System.Security.Cryptography.ProtectedData": "4.5.0"
         },
         "compile": {
-          "lib/netstandard2.0/Microsoft.Identity.Client.Extensions.Msal.dll": {
+          "lib/net6.0/Microsoft.Identity.Client.Extensions.Msal.dll": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/netstandard2.0/Microsoft.Identity.Client.Extensions.Msal.dll": {
+          "lib/net6.0/Microsoft.Identity.Client.Extensions.Msal.dll": {
             "related": ".xml"
           }
         }
@@ -1391,7 +1509,7 @@
           "buildMultiTargeting/Microsoft.NET.Test.Sdk.props": {}
         }
       },
-      "Microsoft.NETCore.Platforms/5.0.0": {
+      "Microsoft.NETCore.Platforms/1.1.0": {
         "type": "package",
         "compile": {
           "lib/netstandard1.0/_._": {}
@@ -1685,33 +1803,10 @@
           }
         }
       },
-      "Microsoft.Win32.Registry/5.0.0": {
-        "type": "package",
-        "dependencies": {
-          "System.Security.AccessControl": "5.0.0",
-          "System.Security.Principal.Windows": "5.0.0"
-        },
-        "compile": {
-          "ref/netstandard2.0/_._": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/netstandard2.0/Microsoft.Win32.Registry.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtimeTargets": {
-          "runtimes/win/lib/netstandard2.0/Microsoft.Win32.Registry.dll": {
-            "assetType": "runtime",
-            "rid": "win"
-          }
-        }
-      },
       "Microsoft.Win32.SystemEvents/6.0.0": {
         "type": "package",
         "compile": {
-          "lib/net6.0/_._": {
+          "lib/net6.0/Microsoft.Win32.SystemEvents.dll": {
             "related": ".xml"
           }
         },
@@ -1727,6 +1822,22 @@
           "runtimes/win/lib/net6.0/Microsoft.Win32.SystemEvents.dll": {
             "assetType": "runtime",
             "rid": "win"
+          }
+        }
+      },
+      "Moq/4.20.70": {
+        "type": "package",
+        "dependencies": {
+          "Castle.Core": "5.1.1"
+        },
+        "compile": {
+          "lib/net6.0/Moq.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Moq.dll": {
+            "related": ".xml"
           }
         }
       },
@@ -2002,6 +2113,23 @@
           "lib/netstandard1.1/System.Buffers.dll": {}
         }
       },
+      "System.ClientModel/1.0.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Memory.Data": "1.0.2",
+          "System.Text.Json": "4.7.2"
+        },
+        "compile": {
+          "lib/net6.0/System.ClientModel.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/System.ClientModel.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "System.Collections/4.3.0": {
         "type": "package",
         "dependencies": {
@@ -2058,7 +2186,7 @@
           "System.Security.Permissions": "6.0.0"
         },
         "compile": {
-          "lib/net6.0/_._": {
+          "lib/net6.0/System.Configuration.ConfigurationManager.dll": {
             "related": ".xml"
           }
         },
@@ -2115,50 +2243,52 @@
           "buildTransitive/net6.0/_._": {}
         }
       },
-      "System.Diagnostics.EventLog/5.0.0": {
+      "System.Diagnostics.EventLog/6.0.0": {
         "type": "package",
-        "dependencies": {
-          "Microsoft.NETCore.Platforms": "5.0.0",
-          "Microsoft.Win32.Registry": "5.0.0",
-          "System.Security.Principal.Windows": "5.0.0"
-        },
         "compile": {
-          "ref/netstandard2.0/System.Diagnostics.EventLog.dll": {
+          "lib/net6.0/System.Diagnostics.EventLog.dll": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/netstandard2.0/System.Diagnostics.EventLog.dll": {
+          "lib/net6.0/System.Diagnostics.EventLog.dll": {
             "related": ".xml"
           }
         },
+        "build": {
+          "buildTransitive/netcoreapp3.1/_._": {}
+        },
         "runtimeTargets": {
-          "runtimes/win/lib/netcoreapp2.0/System.Diagnostics.EventLog.dll": {
+          "runtimes/win/lib/net6.0/System.Diagnostics.EventLog.Messages.dll": {
+            "assetType": "runtime",
+            "rid": "win"
+          },
+          "runtimes/win/lib/net6.0/System.Diagnostics.EventLog.dll": {
             "assetType": "runtime",
             "rid": "win"
           }
         }
       },
-      "System.Diagnostics.PerformanceCounter/4.7.0": {
+      "System.Diagnostics.PerformanceCounter/6.0.0": {
         "type": "package",
         "dependencies": {
-          "Microsoft.NETCore.Platforms": "3.1.0",
-          "Microsoft.Win32.Registry": "4.7.0",
-          "System.Configuration.ConfigurationManager": "4.7.0",
-          "System.Security.Principal.Windows": "4.7.0"
+          "System.Configuration.ConfigurationManager": "6.0.0"
         },
         "compile": {
-          "ref/netstandard2.0/System.Diagnostics.PerformanceCounter.dll": {
+          "lib/net6.0/System.Diagnostics.PerformanceCounter.dll": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/netstandard2.0/System.Diagnostics.PerformanceCounter.dll": {
+          "lib/net6.0/System.Diagnostics.PerformanceCounter.dll": {
             "related": ".xml"
           }
         },
+        "build": {
+          "buildTransitive/netcoreapp3.1/_._": {}
+        },
         "runtimeTargets": {
-          "runtimes/win/lib/netcoreapp2.0/System.Diagnostics.PerformanceCounter.dll": {
+          "runtimes/win/lib/net6.0/System.Diagnostics.PerformanceCounter.dll": {
             "assetType": "runtime",
             "rid": "win"
           }
@@ -2196,7 +2326,7 @@
           "Microsoft.Win32.SystemEvents": "6.0.0"
         },
         "compile": {
-          "lib/net6.0/_._": {
+          "lib/net6.0/System.Drawing.Common.dll": {
             "related": ".xml"
           }
         },
@@ -2392,11 +2522,11 @@
           }
         }
       },
-      "System.IO.FileSystem.AccessControl/5.0.0": {
+      "System.IO.FileSystem.AccessControl/4.7.0": {
         "type": "package",
         "dependencies": {
-          "System.Security.AccessControl": "5.0.0",
-          "System.Security.Principal.Windows": "5.0.0"
+          "System.Security.AccessControl": "4.7.0",
+          "System.Security.Principal.Windows": "4.7.0"
         },
         "compile": {
           "ref/netstandard2.0/System.IO.FileSystem.AccessControl.dll": {
@@ -3161,7 +3291,7 @@
           "System.Windows.Extensions": "6.0.0"
         },
         "compile": {
-          "lib/net6.0/_._": {
+          "lib/net6.0/System.Security.Permissions.dll": {
             "related": ".xml"
           }
         },
@@ -3355,7 +3485,7 @@
           "System.Drawing.Common": "6.0.0"
         },
         "compile": {
-          "lib/net6.0/_._": {
+          "lib/net6.0/System.Windows.Extensions.dll": {
             "related": ".xml"
           }
         },
@@ -3529,17 +3659,18 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
         "dependencies": {
-          "Azure.Storage.Blobs": "12.13.1",
-          "Azure.Storage.Files.Shares": "12.1.0",
-          "Azure.Storage.Queues": "12.11.1",
-          "Microsoft.ApplicationInsights.WorkerService": "2.21.0",
-          "Microsoft.Azure.Functions.Worker": "1.20.1",
-          "Microsoft.Azure.Functions.Worker.ApplicationInsights": "1.1.0",
-          "Microsoft.Azure.Functions.Worker.Extensions.Http": "3.1.0",
-          "Microsoft.Azure.Functions.Worker.Extensions.Http.AspNetCore": "1.2.0",
-          "Microsoft.Azure.Functions.Worker.Sdk": "1.16.4",
-          "Microsoft.EntityFrameworkCore.SqlServer": "8.0.4",
-          "Microsoft.Extensions.Azure": "1.5.0",
+          "Azure.Storage.Blobs": "12.20.0",
+          "Azure.Storage.Files.Shares": "12.18.0",
+          "Azure.Storage.Queues": "12.18.0",
+          "Microsoft.ApplicationInsights.WorkerService": "2.22.0",
+          "Microsoft.Azure.Functions.Worker": "1.22.0",
+          "Microsoft.Azure.Functions.Worker.ApplicationInsights": "1.2.0",
+          "Microsoft.Azure.Functions.Worker.Extensions.Http": "3.2.0",
+          "Microsoft.Azure.Functions.Worker.Extensions.Http.AspNetCore": "1.2.1",
+          "Microsoft.Azure.Functions.Worker.Extensions.ServiceBus": "5.18.0",
+          "Microsoft.Azure.Functions.Worker.Sdk": "1.17.2",
+          "Microsoft.EntityFrameworkCore.SqlServer": "8.0.5",
+          "Microsoft.Extensions.Azure": "1.7.3",
           "Newtonsoft.Json": "13.0.3",
           "System.Linq.Expressions": "4.3.0"
         },
@@ -3556,114 +3687,174 @@
     }
   },
   "libraries": {
-    "Azure.Core/1.35.0": {
-      "sha512": "hENcx03Jyuqv05F4RBEPbxz29UrM3Nbhnr6Wl6NQpoU9BCIbL3XLentrxDCTrH54NLS11Exxi/o8MYgT/cnKFA==",
+    "Azure.Core/1.39.0": {
+      "sha512": "9vaV4ZICtVQp+2wjOKrIAjEjMzBkUohaBbKGqqcTW993MRfHA0N4L1BszQjWynS7lRvlYQLxaFK4wh9ewNm4HQ==",
       "type": "package",
-      "path": "azure.core/1.35.0",
+      "path": "azure.core/1.39.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "CHANGELOG.md",
         "README.md",
-        "azure.core.1.35.0.nupkg.sha512",
+        "azure.core.1.39.0.nupkg.sha512",
         "azure.core.nuspec",
         "azureicon.png",
         "lib/net461/Azure.Core.dll",
         "lib/net461/Azure.Core.xml",
         "lib/net472/Azure.Core.dll",
         "lib/net472/Azure.Core.xml",
-        "lib/net5.0/Azure.Core.dll",
-        "lib/net5.0/Azure.Core.xml",
         "lib/net6.0/Azure.Core.dll",
         "lib/net6.0/Azure.Core.xml",
-        "lib/netcoreapp2.1/Azure.Core.dll",
-        "lib/netcoreapp2.1/Azure.Core.xml",
         "lib/netstandard2.0/Azure.Core.dll",
         "lib/netstandard2.0/Azure.Core.xml"
       ]
     },
-    "Azure.Identity/1.10.3": {
-      "sha512": "l1Xm2MWOF2Mzcwuarlw8kWQXLZk3UeB55aQXVyjj23aBfDwOZ3gu5GP2kJ6KlmZeZv2TCzw7x4L3V36iNr3gww==",
+    "Azure.Core.Amqp/1.3.0": {
+      "sha512": "6GG4gyFkAuHtpBVkvj0wE5+lCM+ttsZlIWAipBkI+jlCUlTgrTiNUROBFnb8xuKoymVDw9Tf1W8RoKqgbd71lg==",
       "type": "package",
-      "path": "azure.identity/1.10.3",
+      "path": "azure.core.amqp/1.3.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "CHANGELOG.md",
         "README.md",
-        "azure.identity.1.10.3.nupkg.sha512",
+        "azure.core.amqp.1.3.0.nupkg.sha512",
+        "azure.core.amqp.nuspec",
+        "azureicon.png",
+        "lib/netstandard2.0/Azure.Core.Amqp.dll",
+        "lib/netstandard2.0/Azure.Core.Amqp.xml"
+      ]
+    },
+    "Azure.Identity/1.11.2": {
+      "sha512": "mihECA1msfwdjTPXHwK9N3n4ln8jMB0DuT0r2caDGPriRT1vca4/Jgmo6FmFZPo8RQsQt1fVn1Gxv5WqkyHVeA==",
+      "type": "package",
+      "path": "azure.identity/1.11.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "CHANGELOG.md",
+        "README.md",
+        "azure.identity.1.11.2.nupkg.sha512",
         "azure.identity.nuspec",
         "azureicon.png",
         "lib/netstandard2.0/Azure.Identity.dll",
         "lib/netstandard2.0/Azure.Identity.xml"
       ]
     },
-    "Azure.Storage.Blobs/12.13.1": {
-      "sha512": "bEJUFBS9wTk/ZJmJBsm/GktZenl2GVkxLHNC7SkeCd0cfKC1MP11EXV7e0NDySsFDEEjjGACb8Fau6lPTmXdsg==",
+    "Azure.Messaging.ServiceBus/7.17.5": {
+      "sha512": "3Q0idVrwmQfraJBCkc67Kh4Hitt2uQQ3KMBCWBtkyBMUYSCRzflDlKo6Dc7Xg1pDNd7+OnQRkoNypCEqz9n3rA==",
       "type": "package",
-      "path": "azure.storage.blobs/12.13.1",
+      "path": "azure.messaging.servicebus/7.17.5",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "CHANGELOG.md",
         "README.md",
-        "azure.storage.blobs.12.13.1.nupkg.sha512",
+        "azure.messaging.servicebus.7.17.5.nupkg.sha512",
+        "azure.messaging.servicebus.nuspec",
+        "azureicon.png",
+        "lib/netstandard2.0/Azure.Messaging.ServiceBus.dll",
+        "lib/netstandard2.0/Azure.Messaging.ServiceBus.xml"
+      ]
+    },
+    "Azure.Storage.Blobs/12.20.0": {
+      "sha512": "96HBFceJCwfv9Kg51F4C+MVIRhbAPtX2KupRaZqpGJW1FSWmo4JjOhi1sl3ZpZfPAiixYgTxhewMxSc/yd47/Q==",
+      "type": "package",
+      "path": "azure.storage.blobs/12.20.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "CHANGELOG.md",
+        "README.md",
+        "azure.storage.blobs.12.20.0.nupkg.sha512",
         "azure.storage.blobs.nuspec",
         "azureicon.png",
+        "lib/net6.0/Azure.Storage.Blobs.dll",
+        "lib/net6.0/Azure.Storage.Blobs.xml",
         "lib/netstandard2.0/Azure.Storage.Blobs.dll",
         "lib/netstandard2.0/Azure.Storage.Blobs.xml",
         "lib/netstandard2.1/Azure.Storage.Blobs.dll",
         "lib/netstandard2.1/Azure.Storage.Blobs.xml"
       ]
     },
-    "Azure.Storage.Common/12.12.0": {
-      "sha512": "Ms0XsZ/D9Pcudfbqj+rWeCkhx/ITEq8isY0jkor9JFmDAEHsItFa2XrWkzP3vmJU6EsXQrk4snH63HkW/Jksvg==",
+    "Azure.Storage.Common/12.19.0": {
+      "sha512": "aKW5fK4ZSQb9VjENSDbsQoKCDSG6d6mgsBA+groGoHyG2F38QCXThuwcmC7R1XLQOSIh28viE7CJw1BpNdl11A==",
       "type": "package",
-      "path": "azure.storage.common/12.12.0",
+      "path": "azure.storage.common/12.19.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "CHANGELOG.md",
         "README.md",
-        "azure.storage.common.12.12.0.nupkg.sha512",
+        "azure.storage.common.12.19.0.nupkg.sha512",
         "azure.storage.common.nuspec",
         "azureicon.png",
+        "lib/net6.0/Azure.Storage.Common.dll",
+        "lib/net6.0/Azure.Storage.Common.xml",
         "lib/netstandard2.0/Azure.Storage.Common.dll",
         "lib/netstandard2.0/Azure.Storage.Common.xml"
       ]
     },
-    "Azure.Storage.Files.Shares/12.1.0": {
-      "sha512": "qF0nsCNh+SqUvRyx0zG8teJsEImeFlO5uqpcWtursupvhyG+kBJOuSRjUQDoK1Uw4tS2IxkrTV1R5vXP03KGcA==",
+    "Azure.Storage.Files.Shares/12.18.0": {
+      "sha512": "xJpu8LlJGlWpgI/v31rrJJdYZdKj63XQMylgGC0IvxY6iC80dP2I4BcS+qyzMSJxY1/q5DZ8VWGzK/+5MlUjEQ==",
       "type": "package",
-      "path": "azure.storage.files.shares/12.1.0",
+      "path": "azure.storage.files.shares/12.18.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "CHANGELOG.md",
         "README.md",
-        "azure.storage.files.shares.12.1.0.nupkg.sha512",
+        "azure.storage.files.shares.12.18.0.nupkg.sha512",
         "azure.storage.files.shares.nuspec",
+        "azureicon.png",
+        "lib/net6.0/Azure.Storage.Files.Shares.dll",
+        "lib/net6.0/Azure.Storage.Files.Shares.xml",
         "lib/netstandard2.0/Azure.Storage.Files.Shares.dll",
-        "lib/netstandard2.0/Azure.Storage.Files.Shares.xml",
-        "pkgicon.png"
+        "lib/netstandard2.0/Azure.Storage.Files.Shares.xml"
       ]
     },
-    "Azure.Storage.Queues/12.11.1": {
-      "sha512": "bvVjNP136ZukujHczlAqTyoknWcr6JNb/qpWPjTOV2wYtjRDYPuhPRWcAYrHWsr6BDLtgofg4cFg+knqoOBXNg==",
+    "Azure.Storage.Queues/12.18.0": {
+      "sha512": "lj1RKVqrTdQtQls9O23kQ/ZWVYDYH8NV9ImiYUdT3JkWhGJJ3LxdT1oogxgScwOOP4Q9P+3IkGnpsDsadzE1/Q==",
       "type": "package",
-      "path": "azure.storage.queues/12.11.1",
+      "path": "azure.storage.queues/12.18.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "CHANGELOG.md",
         "README.md",
-        "azure.storage.queues.12.11.1.nupkg.sha512",
+        "azure.storage.queues.12.18.0.nupkg.sha512",
         "azure.storage.queues.nuspec",
         "azureicon.png",
+        "lib/net6.0/Azure.Storage.Queues.dll",
+        "lib/net6.0/Azure.Storage.Queues.xml",
         "lib/netstandard2.0/Azure.Storage.Queues.dll",
         "lib/netstandard2.0/Azure.Storage.Queues.xml",
         "lib/netstandard2.1/Azure.Storage.Queues.dll",
         "lib/netstandard2.1/Azure.Storage.Queues.xml"
+      ]
+    },
+    "Castle.Core/5.1.1": {
+      "sha512": "rpYtIczkzGpf+EkZgDr9CClTdemhsrwA/W5hMoPjLkRFnXzH44zDLoovXeKtmxb1ykXK9aJVODSpiJml8CTw2g==",
+      "type": "package",
+      "path": "castle.core/5.1.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "ASL - Apache Software Foundation License.txt",
+        "CHANGELOG.md",
+        "LICENSE",
+        "castle-logo.png",
+        "castle.core.5.1.1.nupkg.sha512",
+        "castle.core.nuspec",
+        "lib/net462/Castle.Core.dll",
+        "lib/net462/Castle.Core.xml",
+        "lib/net6.0/Castle.Core.dll",
+        "lib/net6.0/Castle.Core.xml",
+        "lib/netstandard2.0/Castle.Core.dll",
+        "lib/netstandard2.0/Castle.Core.xml",
+        "lib/netstandard2.1/Castle.Core.dll",
+        "lib/netstandard2.1/Castle.Core.xml",
+        "readme.txt"
       ]
     },
     "coverlet.collector/6.0.0": {
@@ -3719,14 +3910,14 @@
         "coverlet.collector.nuspec"
       ]
     },
-    "Google.Protobuf/3.23.3": {
-      "sha512": "CH/9X2w7zTYyZjGCMDlfi3ZaB1HZ3BM35XUm4WADcNWQuT5QttjE2BQ+ydSROaZ1JEJ5p7gh1LKIbf9hoWrFNA==",
+    "Google.Protobuf/3.25.2": {
+      "sha512": "g/xIIeLhR77bl4ajGGbPYRmZf5acJlCRaSBqUnU8+2aQYREnZnv+UccRNndHof4mWO1ORS0b5i6on40VOjBpsg==",
       "type": "package",
-      "path": "google.protobuf/3.23.3",
+      "path": "google.protobuf/3.25.2",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "google.protobuf.3.23.3.nupkg.sha512",
+        "google.protobuf.3.25.2.nupkg.sha512",
         "google.protobuf.nuspec",
         "lib/net45/Google.Protobuf.dll",
         "lib/net45/Google.Protobuf.pdb",
@@ -3742,22 +3933,19 @@
         "lib/netstandard2.0/Google.Protobuf.xml"
       ]
     },
-    "Grpc.Core.Api/2.55.0": {
-      "sha512": "qtJauqAZ4jAM6A2TQyenhpZWPfJBow7/HV/KiRbxJvYHo9jVtUL7SBIs3cjvBh5DXIUaNFIFfBQ3QGyv3nLKCw==",
+    "Grpc.Core.Api/2.60.0": {
+      "sha512": "VWah+8dGJhhsay5BQ/Ljq6GYDWj0lSjdzqyoBgUQhXTbBqhs+q5dRFROKxI1xxzlL4pfUO45cf/y+KnHVFG9ew==",
       "type": "package",
-      "path": "grpc.core.api/2.55.0",
+      "path": "grpc.core.api/2.60.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "README.md",
-        "grpc.core.api.2.55.0.nupkg.sha512",
+        "grpc.core.api.2.60.0.nupkg.sha512",
         "grpc.core.api.nuspec",
         "lib/net462/Grpc.Core.Api.dll",
         "lib/net462/Grpc.Core.Api.pdb",
         "lib/net462/Grpc.Core.Api.xml",
-        "lib/netstandard1.5/Grpc.Core.Api.dll",
-        "lib/netstandard1.5/Grpc.Core.Api.pdb",
-        "lib/netstandard1.5/Grpc.Core.Api.xml",
         "lib/netstandard2.0/Grpc.Core.Api.dll",
         "lib/netstandard2.0/Grpc.Core.Api.pdb",
         "lib/netstandard2.0/Grpc.Core.Api.xml",
@@ -3767,25 +3955,28 @@
         "packageIcon.png"
       ]
     },
-    "Grpc.Net.Client/2.55.0": {
-      "sha512": "cQyNEAIVs/5npjSHuCKCT5kQJm3AyOnUw7h7s2lXt9rSWC/bhCGPbNAtiFGNvKiQAYgIt4zV13BS983viZP9pg==",
+    "Grpc.Net.Client/2.60.0": {
+      "sha512": "J9U96gjZHOcqSgAThg9vZZhLsbTD005bUggPtMP/RVQnGc3+tQJTpkRUCJtJWq9cykNydsRVoyU38TjPP/VJ4A==",
       "type": "package",
-      "path": "grpc.net.client/2.55.0",
+      "path": "grpc.net.client/2.60.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "README.md",
-        "grpc.net.client.2.55.0.nupkg.sha512",
+        "grpc.net.client.2.60.0.nupkg.sha512",
         "grpc.net.client.nuspec",
-        "lib/net5.0/Grpc.Net.Client.dll",
-        "lib/net5.0/Grpc.Net.Client.pdb",
-        "lib/net5.0/Grpc.Net.Client.xml",
+        "lib/net462/Grpc.Net.Client.dll",
+        "lib/net462/Grpc.Net.Client.pdb",
+        "lib/net462/Grpc.Net.Client.xml",
         "lib/net6.0/Grpc.Net.Client.dll",
         "lib/net6.0/Grpc.Net.Client.pdb",
         "lib/net6.0/Grpc.Net.Client.xml",
         "lib/net7.0/Grpc.Net.Client.dll",
         "lib/net7.0/Grpc.Net.Client.pdb",
         "lib/net7.0/Grpc.Net.Client.xml",
+        "lib/net8.0/Grpc.Net.Client.dll",
+        "lib/net8.0/Grpc.Net.Client.pdb",
+        "lib/net8.0/Grpc.Net.Client.xml",
         "lib/netstandard2.0/Grpc.Net.Client.dll",
         "lib/netstandard2.0/Grpc.Net.Client.pdb",
         "lib/netstandard2.0/Grpc.Net.Client.xml",
@@ -3795,25 +3986,25 @@
         "packageIcon.png"
       ]
     },
-    "Grpc.Net.ClientFactory/2.55.0": {
-      "sha512": "D8yiJjFxK2mwy0LqNlT8BhZ2nyKWds+Vh44tL2Ilub8evL/98Zt2m5D/xqteO87Ml8S4vyjXrWgSVEyH00mPSw==",
+    "Grpc.Net.ClientFactory/2.60.0": {
+      "sha512": "lCUZjbv6TtI1FbOUE593PLCkXqW2Yrf3KsFfzxIMdJ54o4ELwCEQ26xjfrm+hMTefiXxvXf9FO7zL1rGLWWSig==",
       "type": "package",
-      "path": "grpc.net.clientfactory/2.55.0",
+      "path": "grpc.net.clientfactory/2.60.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "README.md",
-        "grpc.net.clientfactory.2.55.0.nupkg.sha512",
+        "grpc.net.clientfactory.2.60.0.nupkg.sha512",
         "grpc.net.clientfactory.nuspec",
-        "lib/net5.0/Grpc.Net.ClientFactory.dll",
-        "lib/net5.0/Grpc.Net.ClientFactory.pdb",
-        "lib/net5.0/Grpc.Net.ClientFactory.xml",
         "lib/net6.0/Grpc.Net.ClientFactory.dll",
         "lib/net6.0/Grpc.Net.ClientFactory.pdb",
         "lib/net6.0/Grpc.Net.ClientFactory.xml",
         "lib/net7.0/Grpc.Net.ClientFactory.dll",
         "lib/net7.0/Grpc.Net.ClientFactory.pdb",
         "lib/net7.0/Grpc.Net.ClientFactory.xml",
+        "lib/net8.0/Grpc.Net.ClientFactory.dll",
+        "lib/net8.0/Grpc.Net.ClientFactory.pdb",
+        "lib/net8.0/Grpc.Net.ClientFactory.xml",
         "lib/netstandard2.0/Grpc.Net.ClientFactory.dll",
         "lib/netstandard2.0/Grpc.Net.ClientFactory.pdb",
         "lib/netstandard2.0/Grpc.Net.ClientFactory.xml",
@@ -3823,24 +4014,24 @@
         "packageIcon.png"
       ]
     },
-    "Grpc.Net.Common/2.55.0": {
-      "sha512": "s1tzY9Z3jKq+mcYGSkZSTTs8Gwi9M5zfXltSDIx7XvFIdSbh+QtfWiV/4n+vP8yDvFDQASaW+6BzkGUbHEftRA==",
+    "Grpc.Net.Common/2.60.0": {
+      "sha512": "Y/917aplgD1RA0q1cd9WpnMGyl9Luu3WZl6ZMpPvNQwg2TNw/3uXUDSriDBybeCtxnKUCtxUcWO3WsVkhM1DcA==",
       "type": "package",
-      "path": "grpc.net.common/2.55.0",
+      "path": "grpc.net.common/2.60.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "grpc.net.common.2.55.0.nupkg.sha512",
+        "grpc.net.common.2.60.0.nupkg.sha512",
         "grpc.net.common.nuspec",
-        "lib/net5.0/Grpc.Net.Common.dll",
-        "lib/net5.0/Grpc.Net.Common.pdb",
-        "lib/net5.0/Grpc.Net.Common.xml",
         "lib/net6.0/Grpc.Net.Common.dll",
         "lib/net6.0/Grpc.Net.Common.pdb",
         "lib/net6.0/Grpc.Net.Common.xml",
         "lib/net7.0/Grpc.Net.Common.dll",
         "lib/net7.0/Grpc.Net.Common.pdb",
         "lib/net7.0/Grpc.Net.Common.xml",
+        "lib/net8.0/Grpc.Net.Common.dll",
+        "lib/net8.0/Grpc.Net.Common.pdb",
+        "lib/net8.0/Grpc.Net.Common.xml",
         "lib/netstandard2.0/Grpc.Net.Common.dll",
         "lib/netstandard2.0/Grpc.Net.Common.pdb",
         "lib/netstandard2.0/Grpc.Net.Common.xml",
@@ -3850,10 +4041,10 @@
         "packageIcon.png"
       ]
     },
-    "Microsoft.ApplicationInsights/2.21.0": {
-      "sha512": "btZEDWAFNo9CoYliMCriSMTX3ruRGZTtYw4mo2XyyfLlowFicYVM2Xszi5evDG95QRYV7MbbH3D2RqVwfZlJHw==",
+    "Microsoft.ApplicationInsights/2.22.0": {
+      "sha512": "3AOM9bZtku7RQwHyMEY3tQMrHIgjcfRDa6YQpd/QG2LDGvMydSlL9Di+8LLMt7J2RDdfJ7/2jdYv6yHcMJAnNw==",
       "type": "package",
-      "path": "microsoft.applicationinsights/2.21.0",
+      "path": "microsoft.applicationinsights/2.22.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -3867,14 +4058,14 @@
         "lib/netstandard2.0/Microsoft.ApplicationInsights.dll",
         "lib/netstandard2.0/Microsoft.ApplicationInsights.pdb",
         "lib/netstandard2.0/Microsoft.ApplicationInsights.xml",
-        "microsoft.applicationinsights.2.21.0.nupkg.sha512",
+        "microsoft.applicationinsights.2.22.0.nupkg.sha512",
         "microsoft.applicationinsights.nuspec"
       ]
     },
-    "Microsoft.ApplicationInsights.DependencyCollector/2.21.0": {
-      "sha512": "XArm5tBEUdWs05eDKxnsUUQBduJ45DEQOMnpL7wNWxBpgxn+dbl8nObA2jzExbQhbw6P74lc/1f+RdV4iPaOgg==",
+    "Microsoft.ApplicationInsights.DependencyCollector/2.22.0": {
+      "sha512": "gseSmuCshdZqcn5r6EW1Zx52e5/p2RpAsHSanlxs8pq+Pbg1RZP678tXtxfVuHC0fA3MVV852pnfFC7ZGB0jew==",
       "type": "package",
-      "path": "microsoft.applicationinsights.dependencycollector/2.21.0",
+      "path": "microsoft.applicationinsights.dependencycollector/2.22.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -3889,14 +4080,14 @@
         "lib/netstandard2.0/Microsoft.AI.DependencyCollector.dll",
         "lib/netstandard2.0/Microsoft.AI.DependencyCollector.pdb",
         "lib/netstandard2.0/Microsoft.AI.DependencyCollector.xml",
-        "microsoft.applicationinsights.dependencycollector.2.21.0.nupkg.sha512",
+        "microsoft.applicationinsights.dependencycollector.2.22.0.nupkg.sha512",
         "microsoft.applicationinsights.dependencycollector.nuspec"
       ]
     },
-    "Microsoft.ApplicationInsights.EventCounterCollector/2.21.0": {
-      "sha512": "MfF9IKxx9UhaYHVFQ1VKw0LYvBhkjZtPNUmCTYlGws0N7D2EaupmeIj/EWalqP47sQRedR9+VzARsONcwH8OCA==",
+    "Microsoft.ApplicationInsights.EventCounterCollector/2.22.0": {
+      "sha512": "/fXUyZIMwaWfETgire4fygaBhY8J+hXvTVhSFXKV0JOFBenzzU4smGW8iRUFhE534a3QrczuFfmfCCkXRKbsNg==",
       "type": "package",
-      "path": "microsoft.applicationinsights.eventcountercollector/2.21.0",
+      "path": "microsoft.applicationinsights.eventcountercollector/2.22.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -3904,14 +4095,14 @@
         "lib/netstandard2.0/Microsoft.AI.EventCounterCollector.dll",
         "lib/netstandard2.0/Microsoft.AI.EventCounterCollector.pdb",
         "lib/netstandard2.0/Microsoft.AI.EventCounterCollector.xml",
-        "microsoft.applicationinsights.eventcountercollector.2.21.0.nupkg.sha512",
+        "microsoft.applicationinsights.eventcountercollector.2.22.0.nupkg.sha512",
         "microsoft.applicationinsights.eventcountercollector.nuspec"
       ]
     },
-    "Microsoft.ApplicationInsights.PerfCounterCollector/2.21.0": {
-      "sha512": "RcckSVkfu+NkDie6/HyM6AVLHmTMVZrUrYnDeJdvRByOc2a+DqTM6KXMtsTHW/5+K7DT9QK5ZrZdi0YbBW8PVA==",
+    "Microsoft.ApplicationInsights.PerfCounterCollector/2.22.0": {
+      "sha512": "nExsJsbN7694ueUNNBms/UNgza9WH4W/I6i5CnF9ujJ1sp57EL5Uk0NP9MDwlLVtYaaiznKPatVSv3Nu8vAplw==",
       "type": "package",
-      "path": "microsoft.applicationinsights.perfcountercollector/2.21.0",
+      "path": "microsoft.applicationinsights.perfcountercollector/2.22.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -3926,14 +4117,14 @@
         "lib/netstandard2.0/Microsoft.AI.PerfCounterCollector.dll",
         "lib/netstandard2.0/Microsoft.AI.PerfCounterCollector.pdb",
         "lib/netstandard2.0/Microsoft.AI.PerfCounterCollector.xml",
-        "microsoft.applicationinsights.perfcountercollector.2.21.0.nupkg.sha512",
+        "microsoft.applicationinsights.perfcountercollector.2.22.0.nupkg.sha512",
         "microsoft.applicationinsights.perfcountercollector.nuspec"
       ]
     },
-    "Microsoft.ApplicationInsights.WindowsServer/2.21.0": {
-      "sha512": "Xbhss7dqbKyE5PENm1lRA9oxzhKEouKGMzgNqJ9xTHPZiogDwKVMK02qdbVhvaXKf9zG8RvvIpM5tnGR5o+Onw==",
+    "Microsoft.ApplicationInsights.WindowsServer/2.22.0": {
+      "sha512": "9k1x1+Kq1fElvcv0o/w9w8tRWAa2Y0f4NPBeHF5b2xCety4GM1yv3K3Ra0lZwO3kW0SHlm9M8nrySuyKQlHyYA==",
       "type": "package",
-      "path": "microsoft.applicationinsights.windowsserver/2.21.0",
+      "path": "microsoft.applicationinsights.windowsserver/2.22.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -3948,14 +4139,14 @@
         "lib/netstandard2.0/Microsoft.AI.WindowsServer.dll",
         "lib/netstandard2.0/Microsoft.AI.WindowsServer.pdb",
         "lib/netstandard2.0/Microsoft.AI.WindowsServer.xml",
-        "microsoft.applicationinsights.windowsserver.2.21.0.nupkg.sha512",
+        "microsoft.applicationinsights.windowsserver.2.22.0.nupkg.sha512",
         "microsoft.applicationinsights.windowsserver.nuspec"
       ]
     },
-    "Microsoft.ApplicationInsights.WindowsServer.TelemetryChannel/2.21.0": {
-      "sha512": "7D4oq+9YyagEPx+0kNNOXdG6c7IDM/2d+637nAYKFqdWhNN0IqHZEed0DuG28waj7hBSLM9lBO+B8qQqgfE4rw==",
+    "Microsoft.ApplicationInsights.WindowsServer.TelemetryChannel/2.22.0": {
+      "sha512": "Blb6S8UJSJ/jo6mxeO38gKgui75D2brp5NpXJoZUhyJzfmYsfhn7a4t5f+CDfAKyvie7sQB2FIzeEDQSiRE5zw==",
       "type": "package",
-      "path": "microsoft.applicationinsights.windowsserver.telemetrychannel/2.21.0",
+      "path": "microsoft.applicationinsights.windowsserver.telemetrychannel/2.22.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -3970,14 +4161,14 @@
         "lib/netstandard2.0/Microsoft.AI.ServerTelemetryChannel.dll",
         "lib/netstandard2.0/Microsoft.AI.ServerTelemetryChannel.pdb",
         "lib/netstandard2.0/Microsoft.AI.ServerTelemetryChannel.xml",
-        "microsoft.applicationinsights.windowsserver.telemetrychannel.2.21.0.nupkg.sha512",
+        "microsoft.applicationinsights.windowsserver.telemetrychannel.2.22.0.nupkg.sha512",
         "microsoft.applicationinsights.windowsserver.telemetrychannel.nuspec"
       ]
     },
-    "Microsoft.ApplicationInsights.WorkerService/2.21.0": {
-      "sha512": "Y/KcaQf+Jy92vdHTd2P8zoaW/IIUl4VkzGkvmBqi1IFQ0JXR4f6LXB73/2GMGhWMc7+QMVHeqW0QDjbLU6Fw5g==",
+    "Microsoft.ApplicationInsights.WorkerService/2.22.0": {
+      "sha512": "CXwd2s8gOXF9bs0Rn1iAggyNxW9HDbiUIikjtiUOPJW7MMgpEzFk27pJyakMijMHrqCptElTK+C6TWwUmoRLqw==",
       "type": "package",
-      "path": "microsoft.applicationinsights.workerservice/2.21.0",
+      "path": "microsoft.applicationinsights.workerservice/2.22.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -3985,14 +4176,36 @@
         "lib/netstandard2.0/Microsoft.ApplicationInsights.WorkerService.dll",
         "lib/netstandard2.0/Microsoft.ApplicationInsights.WorkerService.pdb",
         "lib/netstandard2.0/Microsoft.ApplicationInsights.WorkerService.xml",
-        "microsoft.applicationinsights.workerservice.2.21.0.nupkg.sha512",
+        "microsoft.applicationinsights.workerservice.2.22.0.nupkg.sha512",
         "microsoft.applicationinsights.workerservice.nuspec"
       ]
     },
-    "Microsoft.Azure.Functions.Worker/1.20.1": {
-      "sha512": "5YzQN/vFTybJr7+8fqkb0QX+EZY9J7dOVf2L7zcb5+LiboXNaYOdQBnwcZXR6NnCOJd3rvcAEWMH3NMx9f3BGQ==",
+    "Microsoft.Azure.Amqp/2.6.5": {
+      "sha512": "Hx0XrpkASCfZbwKqr5bc/5DveYZyhh+737AdUh0jq6nXFO+LbhSMOS3KHI4DtoHDTWR1WFycdxNJdByCZ/bzXQ==",
       "type": "package",
-      "path": "microsoft.azure.functions.worker/1.20.1",
+      "path": "microsoft.azure.amqp/2.6.5",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "images/icon.png",
+        "lib/monoandroid/Microsoft.Azure.Amqp.dll",
+        "lib/net45/Microsoft.Azure.Amqp.dll",
+        "lib/net45/Microsoft.Azure.Amqp.xml",
+        "lib/netstandard1.3/Microsoft.Azure.Amqp.dll",
+        "lib/netstandard1.3/Microsoft.Azure.Amqp.xml",
+        "lib/netstandard2.0/Microsoft.Azure.Amqp.dll",
+        "lib/netstandard2.0/Microsoft.Azure.Amqp.xml",
+        "lib/portable-net45+wp8+wpa81+win8+MonoAndroid10+MonoTouch10+Xamarin.iOS10+UAP10/Microsoft.Azure.Amqp.dll",
+        "lib/uap10.0/Microsoft.Azure.Amqp.dll",
+        "lib/uap10.0/Microsoft.Azure.Amqp.pri",
+        "microsoft.azure.amqp.2.6.5.nupkg.sha512",
+        "microsoft.azure.amqp.nuspec"
+      ]
+    },
+    "Microsoft.Azure.Functions.Worker/1.22.0": {
+      "sha512": "NyzBLZ2exCe4Crx6P5NRqnqMFt9i1VfGDRemeIkwZ8r9pRGksZuW1cArklOox2gLxCVX5rrzQBNfTJbF4lzAxw==",
+      "type": "package",
+      "path": "microsoft.azure.functions.worker/1.22.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -4005,28 +4218,28 @@
         "lib/net7.0/Microsoft.Azure.Functions.Worker.xml",
         "lib/netstandard2.0/Microsoft.Azure.Functions.Worker.dll",
         "lib/netstandard2.0/Microsoft.Azure.Functions.Worker.xml",
-        "microsoft.azure.functions.worker.1.20.1.nupkg.sha512",
+        "microsoft.azure.functions.worker.1.22.0.nupkg.sha512",
         "microsoft.azure.functions.worker.nuspec"
       ]
     },
-    "Microsoft.Azure.Functions.Worker.ApplicationInsights/1.1.0": {
-      "sha512": "0t3andm3vCeIAAlroO06GrgNmMTJzHZPSEpqIrLSnwc9zflg0/dBC7K3Ig+gA2AcM3Qo17K1zTvgokr9nlpUxw==",
+    "Microsoft.Azure.Functions.Worker.ApplicationInsights/1.2.0": {
+      "sha512": "Dr2lFg1pl65cDn+rLzteUIHCWNkbBnWGIRQUDFffvCAgwVN+ZcVAShIr9uCmhRvJznxC2wZFTwfSwxC7/nEkFw==",
       "type": "package",
-      "path": "microsoft.azure.functions.worker.applicationinsights/1.1.0",
+      "path": "microsoft.azure.functions.worker.applicationinsights/1.2.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "README.md",
         "icon.png",
         "lib/netstandard2.0/Microsoft.Azure.Functions.Worker.ApplicationInsights.dll",
-        "microsoft.azure.functions.worker.applicationinsights.1.1.0.nupkg.sha512",
+        "microsoft.azure.functions.worker.applicationinsights.1.2.0.nupkg.sha512",
         "microsoft.azure.functions.worker.applicationinsights.nuspec"
       ]
     },
-    "Microsoft.Azure.Functions.Worker.Core/1.16.1": {
-      "sha512": "D69cUc5WnVzp+X6yzdrCaq2Pp1oWD/hIpqDwKlv4pTwpZszaVDuDHt9F0Q7Z5Yiq87xGeOgWWQhGNc3c9nfBpQ==",
+    "Microsoft.Azure.Functions.Worker.Core/1.18.0": {
+      "sha512": "AFHJMjPB7JhwnWnGFbroSGMRa5ertGrG6j9DcCzpto3YmjrM29BasD9zLekAniRjZHqBMF0sSsTm1aq/cKdVKQ==",
       "type": "package",
-      "path": "microsoft.azure.functions.worker.core/1.16.1",
+      "path": "microsoft.azure.functions.worker.core/1.18.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -4035,7 +4248,7 @@
         "lib/net5.0/Microsoft.Azure.Functions.Worker.Core.xml",
         "lib/netstandard2.0/Microsoft.Azure.Functions.Worker.Core.dll",
         "lib/netstandard2.0/Microsoft.Azure.Functions.Worker.Core.xml",
-        "microsoft.azure.functions.worker.core.1.16.1.nupkg.sha512",
+        "microsoft.azure.functions.worker.core.1.18.0.nupkg.sha512",
         "microsoft.azure.functions.worker.core.nuspec"
       ]
     },
@@ -4052,51 +4265,81 @@
         "microsoft.azure.functions.worker.extensions.abstractions.nuspec"
       ]
     },
-    "Microsoft.Azure.Functions.Worker.Extensions.Http/3.1.0": {
-      "sha512": "25dfm0UN+UoxgP0mnJPd1OiMqmd8Yu+30fD3ZiApopYkyDR87CpaGqCJtV/hJbMvMQ4+WwB8bq7MEWeuyQ1uCQ==",
+    "Microsoft.Azure.Functions.Worker.Extensions.Http/3.2.0": {
+      "sha512": "TC1xa/s1hZ97ertSh0+qZVjeXB632ObjsuVEhytND32kLfJhT7u+AiBunvdACgn6r0WOZeLIa/BZPA7qovFxiw==",
       "type": "package",
-      "path": "microsoft.azure.functions.worker.extensions.http/3.1.0",
+      "path": "microsoft.azure.functions.worker.extensions.http/3.2.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "icon.png",
         "lib/netstandard2.0/Microsoft.Azure.Functions.Worker.Extensions.Http.dll",
         "lib/netstandard2.0/Microsoft.Azure.Functions.Worker.Extensions.Http.xml",
-        "microsoft.azure.functions.worker.extensions.http.3.1.0.nupkg.sha512",
+        "microsoft.azure.functions.worker.extensions.http.3.2.0.nupkg.sha512",
         "microsoft.azure.functions.worker.extensions.http.nuspec"
       ]
     },
-    "Microsoft.Azure.Functions.Worker.Extensions.Http.AspNetCore/1.2.0": {
-      "sha512": "Z7WFsdDkB8Y6bcoASyc+bLVw4D7AZuisUcqzgZ2MFgluG0PutsL+xWuE46lveJobw6F2LOlGgCZa8jar+rvdnA==",
+    "Microsoft.Azure.Functions.Worker.Extensions.Http.AspNetCore/1.2.1": {
+      "sha512": "IIDv5U5Roskg/qC3iDqhcgpJ6/LTOq12BW8MfyB0r3nrTiWmkRaLUmyKpm1t/4XIV8LGKY9J/W+RJpYCF2qthA==",
       "type": "package",
-      "path": "microsoft.azure.functions.worker.extensions.http.aspnetcore/1.2.0",
+      "path": "microsoft.azure.functions.worker.extensions.http.aspnetcore/1.2.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "icon.png",
         "lib/net6.0/Microsoft.Azure.Functions.Worker.Extensions.Http.AspNetCore.dll",
         "lib/net6.0/Microsoft.Azure.Functions.Worker.Extensions.Http.AspNetCore.xml",
-        "microsoft.azure.functions.worker.extensions.http.aspnetcore.1.2.0.nupkg.sha512",
+        "microsoft.azure.functions.worker.extensions.http.aspnetcore.1.2.1.nupkg.sha512",
         "microsoft.azure.functions.worker.extensions.http.aspnetcore.nuspec"
       ]
     },
-    "Microsoft.Azure.Functions.Worker.Extensions.Http.AspNetCore.Analyzers/1.0.1": {
-      "sha512": "yYdv55rdzHTNfGFah0T19tPjMgK60z721kRyW4Jmb/4exK2z7+cUL7wMZ+jSjK2I2R6V07GKxyaWuy+RJSO6xQ==",
+    "Microsoft.Azure.Functions.Worker.Extensions.Http.AspNetCore.Analyzers/1.0.2": {
+      "sha512": "PrB2dW3LiEn3RdWyLMVQ5U6K497GMwu7TJxfakvV6OYP7nc3kbhDs0ekEtC4TfMcOMzz2B6Y8JTN4ofM2jQ9wQ==",
       "type": "package",
-      "path": "microsoft.azure.functions.worker.extensions.http.aspnetcore.analyzers/1.0.1",
+      "path": "microsoft.azure.functions.worker.extensions.http.aspnetcore.analyzers/1.0.2",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "analyzers/dotnet/cs/Microsoft.Azure.Functions.Worker.Extensions.Http.AspNetCore.Analyzers.dll",
         "icon.png",
-        "microsoft.azure.functions.worker.extensions.http.aspnetcore.analyzers.1.0.1.nupkg.sha512",
+        "microsoft.azure.functions.worker.extensions.http.aspnetcore.analyzers.1.0.2.nupkg.sha512",
         "microsoft.azure.functions.worker.extensions.http.aspnetcore.analyzers.nuspec"
       ]
     },
-    "Microsoft.Azure.Functions.Worker.Grpc/1.15.0": {
-      "sha512": "/829+En1etIrEvDc96W4/hlQRrefUJqcEsw7usxDpLT1XCW5LcYqpP9f4LBMe/fGgr5WYAOZtg04qsu7U85jng==",
+    "Microsoft.Azure.Functions.Worker.Extensions.Rpc/1.0.0": {
+      "sha512": "yCgsptgVPHpRTQhqqiirH62p0274b3RdPf96j8x+c3qOcUmYj5Ab7ktkXZaFjJ8Myk3P2wyzBOpSHdh7eUcnBQ==",
       "type": "package",
-      "path": "microsoft.azure.functions.worker.grpc/1.15.0",
+      "path": "microsoft.azure.functions.worker.extensions.rpc/1.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "icon.png",
+        "lib/net6.0/Microsoft.Azure.Functions.Worker.Extensions.Rpc.dll",
+        "lib/net6.0/Microsoft.Azure.Functions.Worker.Extensions.Rpc.xml",
+        "lib/netstandard2.0/Microsoft.Azure.Functions.Worker.Extensions.Rpc.dll",
+        "lib/netstandard2.0/Microsoft.Azure.Functions.Worker.Extensions.Rpc.xml",
+        "microsoft.azure.functions.worker.extensions.rpc.1.0.0.nupkg.sha512",
+        "microsoft.azure.functions.worker.extensions.rpc.nuspec"
+      ]
+    },
+    "Microsoft.Azure.Functions.Worker.Extensions.ServiceBus/5.18.0": {
+      "sha512": "8R9mwC3qLK0bCMzNINRpIy5XhSAhKj/abzQEEmffaCa1ttPuxkSEuhzwjOPVhj8zJ/6X+xlGUvdCt3KRvUhHaQ==",
+      "type": "package",
+      "path": "microsoft.azure.functions.worker.extensions.servicebus/5.18.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "icon.png",
+        "lib/netstandard2.0/Microsoft.Azure.Functions.Worker.Extensions.ServiceBus.dll",
+        "microsoft.azure.functions.worker.extensions.servicebus.5.18.0.nupkg.sha512",
+        "microsoft.azure.functions.worker.extensions.servicebus.nuspec"
+      ]
+    },
+    "Microsoft.Azure.Functions.Worker.Grpc/1.16.0": {
+      "sha512": "B4GhvNzH4w2pABkL1NbZikcxNSgKknUqqpO0zS488torBOe8AS6JOt4lgGFEe2Lzybkc8/fh7tVFbvkKN4EddA==",
+      "type": "package",
+      "path": "microsoft.azure.functions.worker.grpc/1.16.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -4109,14 +4352,14 @@
         "lib/net7.0/Microsoft.Azure.Functions.Worker.Grpc.xml",
         "lib/netstandard2.0/Microsoft.Azure.Functions.Worker.Grpc.dll",
         "lib/netstandard2.0/Microsoft.Azure.Functions.Worker.Grpc.xml",
-        "microsoft.azure.functions.worker.grpc.1.15.0.nupkg.sha512",
+        "microsoft.azure.functions.worker.grpc.1.16.0.nupkg.sha512",
         "microsoft.azure.functions.worker.grpc.nuspec"
       ]
     },
-    "Microsoft.Azure.Functions.Worker.Sdk/1.16.4": {
-      "sha512": "9Av1Z1EzjZ+KJMnuTW0opc1+qZv7djtIbLKfF3sXslWaOxJBka0mEG5hLRmSoGOnGIncgAzqVJPqXgbRE44i6A==",
+    "Microsoft.Azure.Functions.Worker.Sdk/1.17.2": {
+      "sha512": "MlS1aVc1CEQrb8yQtCshOCP0m8tysyBsZYg7pRbXiar5hF5F08BBruCErWYkk+mIj19js+p1jHo31tZsJY59mQ==",
       "type": "package",
-      "path": "microsoft.azure.functions.worker.sdk/1.16.4",
+      "path": "microsoft.azure.functions.worker.sdk/1.17.2",
       "hasTools": true,
       "files": [
         ".nupkg.metadata",
@@ -4127,7 +4370,7 @@
         "build/Microsoft.Azure.Functions.Worker.Sdk.props",
         "build/Microsoft.Azure.Functions.Worker.Sdk.targets",
         "icon.png",
-        "microsoft.azure.functions.worker.sdk.1.16.4.nupkg.sha512",
+        "microsoft.azure.functions.worker.sdk.1.17.2.nupkg.sha512",
         "microsoft.azure.functions.worker.sdk.nuspec",
         "tools/net472/Humanizer.dll",
         "tools/net472/ICSharpCode.SharpZipLib.dll",
@@ -4231,10 +4474,10 @@
         "tools/uninstall.ps1"
       ]
     },
-    "Microsoft.Azure.Functions.Worker.Sdk.Generators/1.1.6": {
-      "sha512": "R/c5PbpkbDTExBeNYR+RoqbOLKoWz6bQKbX6WfSgpQPwYhRSIITzSdy/eMMNsQjv4OhaTHd865w/HF1OOb0HdQ==",
+    "Microsoft.Azure.Functions.Worker.Sdk.Generators/1.2.1": {
+      "sha512": "kSNn3YAMQNqcU9Pcs14xkYWk5pce8atK5mb/Yr9Pk1Gr53QWBNmrLrVhs9Y63t0rKTqRF1O/4Kg6sNcO8nf2zA==",
       "type": "package",
-      "path": "microsoft.azure.functions.worker.sdk.generators/1.1.6",
+      "path": "microsoft.azure.functions.worker.sdk.generators/1.2.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -4243,7 +4486,7 @@
         "analyzers/dotnet/cs/System.Text.Encodings.Web.dll",
         "analyzers/dotnet/cs/System.Text.Json.dll",
         "icon.png",
-        "microsoft.azure.functions.worker.sdk.generators.1.1.6.nupkg.sha512",
+        "microsoft.azure.functions.worker.sdk.generators.1.2.1.nupkg.sha512",
         "microsoft.azure.functions.worker.sdk.generators.nuspec"
       ]
     },
@@ -4480,10 +4723,10 @@
         "runtimes/win-x86/native/Microsoft.Data.SqlClient.SNI.dll"
       ]
     },
-    "Microsoft.EntityFrameworkCore/8.0.4": {
-      "sha512": "/kyu9pXuxQvhg8RO/oN5Q5Og7cDIVvZtrt1z48rX7Yido+zEGkUkp3/Bjd9u45N2uuPPF8mn2pKDlAewCvv3/Q==",
+    "Microsoft.EntityFrameworkCore/8.0.5": {
+      "sha512": "sqpDZgfzmTPXy/jCekqTaPDwqRDjtdGmIL+eqFfXtVAoH4AanWjeyxQ1ej3uVnTQO6f23+m9+ggJDVcgyPJxcA==",
       "type": "package",
-      "path": "microsoft.entityframeworkcore/8.0.4",
+      "path": "microsoft.entityframeworkcore/8.0.5",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -4492,14 +4735,14 @@
         "buildTransitive/net8.0/Microsoft.EntityFrameworkCore.props",
         "lib/net8.0/Microsoft.EntityFrameworkCore.dll",
         "lib/net8.0/Microsoft.EntityFrameworkCore.xml",
-        "microsoft.entityframeworkcore.8.0.4.nupkg.sha512",
+        "microsoft.entityframeworkcore.8.0.5.nupkg.sha512",
         "microsoft.entityframeworkcore.nuspec"
       ]
     },
-    "Microsoft.EntityFrameworkCore.Abstractions/8.0.4": {
-      "sha512": "S50pjtPNOvRktacaO6UAhvGCPMT56wxqEq8fQfcjaSUySPGba6mKWo6ackw6DdeAR1cA6U+U0uj27warA2KtJA==",
+    "Microsoft.EntityFrameworkCore.Abstractions/8.0.5": {
+      "sha512": "qwYdfjFKtmTXX8NIm0MuZxUkon1tcw+aF5huzR7YOVr/tR3s4fqw9DWcvc23l3Jhpo/uGHWZcNPyFlI2CD3Usg==",
       "type": "package",
-      "path": "microsoft.entityframeworkcore.abstractions/8.0.4",
+      "path": "microsoft.entityframeworkcore.abstractions/8.0.5",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -4507,14 +4750,14 @@
         "PACKAGE.md",
         "lib/net8.0/Microsoft.EntityFrameworkCore.Abstractions.dll",
         "lib/net8.0/Microsoft.EntityFrameworkCore.Abstractions.xml",
-        "microsoft.entityframeworkcore.abstractions.8.0.4.nupkg.sha512",
+        "microsoft.entityframeworkcore.abstractions.8.0.5.nupkg.sha512",
         "microsoft.entityframeworkcore.abstractions.nuspec"
       ]
     },
-    "Microsoft.EntityFrameworkCore.Analyzers/8.0.4": {
-      "sha512": "P8hfMZECdbgle4Us8HGRUKAjqVwgbtr5JqtCxqEoiVORrNQAmcpu3g1NKwTAoUsO9Z0QRgExtYoAmdggR/DkMQ==",
+    "Microsoft.EntityFrameworkCore.Analyzers/8.0.5": {
+      "sha512": "LzoKedC+9A8inF5d3iIzgyv/JDXgKrtpYoGIC3EqGWuHVDm9s/IHHApeTOTbzvnr7yBVV+nmYfyT1nwtzRDp0Q==",
       "type": "package",
-      "path": "microsoft.entityframeworkcore.analyzers/8.0.4",
+      "path": "microsoft.entityframeworkcore.analyzers/8.0.5",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -4522,14 +4765,29 @@
         "analyzers/dotnet/cs/Microsoft.EntityFrameworkCore.Analyzers.dll",
         "docs/PACKAGE.md",
         "lib/netstandard2.0/_._",
-        "microsoft.entityframeworkcore.analyzers.8.0.4.nupkg.sha512",
+        "microsoft.entityframeworkcore.analyzers.8.0.5.nupkg.sha512",
         "microsoft.entityframeworkcore.analyzers.nuspec"
       ]
     },
-    "Microsoft.EntityFrameworkCore.Relational/8.0.4": {
-      "sha512": "aWLT6e9a8oMzXgF0YQpYYa3mDeU+yb2UQSQ+RrIgyGgSpzPfSKgpA7v2kOVDuZr2AQ6NNAlWPaBG7wZuKQI96w==",
+    "Microsoft.EntityFrameworkCore.InMemory/8.0.5": {
+      "sha512": "gKsH9dFzRAvE/DjJZ5sw1LpQoj8jiY1Wxd7BOx0i7oQZ4VyXBIFZYKLXIypkkIHfvqwTlfDL4boMZxVFZ6SgNQ==",
       "type": "package",
-      "path": "microsoft.entityframeworkcore.relational/8.0.4",
+      "path": "microsoft.entityframeworkcore.inmemory/8.0.5",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "PACKAGE.md",
+        "lib/net8.0/Microsoft.EntityFrameworkCore.InMemory.dll",
+        "lib/net8.0/Microsoft.EntityFrameworkCore.InMemory.xml",
+        "microsoft.entityframeworkcore.inmemory.8.0.5.nupkg.sha512",
+        "microsoft.entityframeworkcore.inmemory.nuspec"
+      ]
+    },
+    "Microsoft.EntityFrameworkCore.Relational/8.0.5": {
+      "sha512": "x2bdSK3eKKEQkDdYcGxxDU+S7NqhBiz/Fciz01Mafz9P71VRdP3JskKHaZvwK0/sNEAT3hS7BTsDQGUA2F9mAA==",
+      "type": "package",
+      "path": "microsoft.entityframeworkcore.relational/8.0.5",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -4537,14 +4795,14 @@
         "PACKAGE.md",
         "lib/net8.0/Microsoft.EntityFrameworkCore.Relational.dll",
         "lib/net8.0/Microsoft.EntityFrameworkCore.Relational.xml",
-        "microsoft.entityframeworkcore.relational.8.0.4.nupkg.sha512",
+        "microsoft.entityframeworkcore.relational.8.0.5.nupkg.sha512",
         "microsoft.entityframeworkcore.relational.nuspec"
       ]
     },
-    "Microsoft.EntityFrameworkCore.SqlServer/8.0.4": {
-      "sha512": "/IlHNxzZGqiuVi+FPtjFZgAOfY989fTPtxw8zhmlFwv5M2WJzBSMlAP4jNVQX/k7/qu+y1YvddPxg4O5QdeRXw==",
+    "Microsoft.EntityFrameworkCore.SqlServer/8.0.5": {
+      "sha512": "vBJR6QzJrZvd6oHsfMXA++v+dKYx/vhoPDgUgQZwKbcP9oYJowzoWl5JydPjlrCjwq4sxIOyqxJ7m/rSsb7zMg==",
       "type": "package",
-      "path": "microsoft.entityframeworkcore.sqlserver/8.0.4",
+      "path": "microsoft.entityframeworkcore.sqlserver/8.0.5",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -4552,14 +4810,14 @@
         "PACKAGE.md",
         "lib/net8.0/Microsoft.EntityFrameworkCore.SqlServer.dll",
         "lib/net8.0/Microsoft.EntityFrameworkCore.SqlServer.xml",
-        "microsoft.entityframeworkcore.sqlserver.8.0.4.nupkg.sha512",
+        "microsoft.entityframeworkcore.sqlserver.8.0.5.nupkg.sha512",
         "microsoft.entityframeworkcore.sqlserver.nuspec"
       ]
     },
-    "Microsoft.Extensions.Azure/1.5.0": {
-      "sha512": "UIMQDuMWvoPc7j8e1rlAWgfbi7wkaz/yZd1E6p3a5g27uMteb4Re2Bf1wtwiV/PZmdUd8ds0Dg4JixxwByWelg==",
+    "Microsoft.Extensions.Azure/1.7.3": {
+      "sha512": "9UwW+nCw0wNYt6G+s6UGDkNmS/kVvZSnYoOF6rlmRN2fhnlt5WE3CS1EMq3H7UsOSSg+88sNC2wvTPqFr5dT/w==",
       "type": "package",
-      "path": "microsoft.extensions.azure/1.5.0",
+      "path": "microsoft.extensions.azure/1.7.3",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -4568,7 +4826,7 @@
         "azureicon.png",
         "lib/netstandard2.0/Microsoft.Extensions.Azure.dll",
         "lib/netstandard2.0/Microsoft.Extensions.Azure.xml",
-        "microsoft.extensions.azure.1.5.0.nupkg.sha512",
+        "microsoft.extensions.azure.1.7.3.nupkg.sha512",
         "microsoft.extensions.azure.nuspec"
       ]
     },
@@ -4974,20 +5232,23 @@
         "version.txt"
       ]
     },
-    "Microsoft.Extensions.Http/3.0.3": {
-      "sha512": "dcyB8szIcSynjVZRuFgqkZpPgTc5zeRSj1HMXSmNqWbHYKiPYJl8ZQgBHz6wmZNSUUNGpCs5uxUg8DZHHDC1Ew==",
+    "Microsoft.Extensions.Http/6.0.0": {
+      "sha512": "15+pa2G0bAMHbHewaQIdr/y6ag2H3yh4rd9hTXavtWDzQBkvpe2RMqFg8BxDpcQWssmjmBApGPcw93QRz6YcMg==",
       "type": "package",
-      "path": "microsoft.extensions.http/3.0.3",
+      "path": "microsoft.extensions.http/6.0.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "Icon.png",
-        "lib/netcoreapp3.0/Microsoft.Extensions.Http.dll",
-        "lib/netcoreapp3.0/Microsoft.Extensions.Http.xml",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/net461/Microsoft.Extensions.Http.dll",
+        "lib/net461/Microsoft.Extensions.Http.xml",
         "lib/netstandard2.0/Microsoft.Extensions.Http.dll",
         "lib/netstandard2.0/Microsoft.Extensions.Http.xml",
-        "microsoft.extensions.http.3.0.3.nupkg.sha512",
-        "microsoft.extensions.http.nuspec"
+        "microsoft.extensions.http.6.0.0.nupkg.sha512",
+        "microsoft.extensions.http.nuspec",
+        "useSharedDesignerContext.txt"
       ]
     },
     "Microsoft.Extensions.Logging/8.0.0": {
@@ -5095,10 +5356,10 @@
         "useSharedDesignerContext.txt"
       ]
     },
-    "Microsoft.Extensions.Logging.ApplicationInsights/2.21.0": {
-      "sha512": "tjzErt5oaLs1caaThu6AbtJuHH0oIGDG/rYCXDruHVGig3m8MyCDuwDsGQwzimY7g4aFyLOKfHc3unBN2G96gw==",
+    "Microsoft.Extensions.Logging.ApplicationInsights/2.22.0": {
+      "sha512": "5OmXub+9MyX8FbqgO+hBJRHk1iJ+UZUU20oIU3wo+RbmH6Jtsja79rriHLlzlrkMzWbpCkCzF6f4Yb6iGbsDag==",
       "type": "package",
-      "path": "microsoft.extensions.logging.applicationinsights/2.21.0",
+      "path": "microsoft.extensions.logging.applicationinsights/2.22.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -5106,7 +5367,7 @@
         "lib/netstandard2.0/Microsoft.Extensions.Logging.ApplicationInsights.dll",
         "lib/netstandard2.0/Microsoft.Extensions.Logging.ApplicationInsights.pdb",
         "lib/netstandard2.0/Microsoft.Extensions.Logging.ApplicationInsights.xml",
-        "microsoft.extensions.logging.applicationinsights.2.21.0.nupkg.sha512",
+        "microsoft.extensions.logging.applicationinsights.2.22.0.nupkg.sha512",
         "microsoft.extensions.logging.applicationinsights.nuspec"
       ]
     },
@@ -5311,21 +5572,18 @@
         "useSharedDesignerContext.txt"
       ]
     },
-    "Microsoft.Identity.Client/4.56.0": {
-      "sha512": "rr4zbidvHy9r4NvOAs5hdd964Ao2A0pAeFBJKR95u1CJAVzbd1p6tPTXUZ+5ld0cfThiVSGvz6UHwY6JjraTpA==",
+    "Microsoft.Identity.Client/4.60.3": {
+      "sha512": "jve1RzmSpBhGlqMzPva6VfRbLMLZZc1Q8WRVZf8+iEruQkBgDTJPq8OeTehcY4GGYG1j6UB1xVofVE+n4BLDdw==",
       "type": "package",
-      "path": "microsoft.identity.client/4.56.0",
+      "path": "microsoft.identity.client/4.60.3",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "lib/monoandroid10.0/Microsoft.Identity.Client.dll",
-        "lib/monoandroid10.0/Microsoft.Identity.Client.xml",
-        "lib/monoandroid90/Microsoft.Identity.Client.dll",
-        "lib/monoandroid90/Microsoft.Identity.Client.xml",
-        "lib/net45/Microsoft.Identity.Client.dll",
-        "lib/net45/Microsoft.Identity.Client.xml",
-        "lib/net461/Microsoft.Identity.Client.dll",
-        "lib/net461/Microsoft.Identity.Client.xml",
+        "README.md",
+        "lib/monoandroid12.0/Microsoft.Identity.Client.dll",
+        "lib/monoandroid12.0/Microsoft.Identity.Client.xml",
+        "lib/net462/Microsoft.Identity.Client.dll",
+        "lib/net462/Microsoft.Identity.Client.xml",
         "lib/net6.0-android31.0/Microsoft.Identity.Client.dll",
         "lib/net6.0-android31.0/Microsoft.Identity.Client.xml",
         "lib/net6.0-ios15.4/Microsoft.Identity.Client.dll",
@@ -5334,8 +5592,6 @@
         "lib/net6.0-windows7.0/Microsoft.Identity.Client.xml",
         "lib/net6.0/Microsoft.Identity.Client.dll",
         "lib/net6.0/Microsoft.Identity.Client.xml",
-        "lib/netcoreapp2.1/Microsoft.Identity.Client.dll",
-        "lib/netcoreapp2.1/Microsoft.Identity.Client.xml",
         "lib/netstandard2.0/Microsoft.Identity.Client.dll",
         "lib/netstandard2.0/Microsoft.Identity.Client.xml",
         "lib/uap10.0.17763/Microsoft.Identity.Client.dll",
@@ -5343,20 +5599,22 @@
         "lib/uap10.0.17763/Microsoft.Identity.Client.xml",
         "lib/xamarinios10/Microsoft.Identity.Client.dll",
         "lib/xamarinios10/Microsoft.Identity.Client.xml",
-        "microsoft.identity.client.4.56.0.nupkg.sha512",
+        "microsoft.identity.client.4.60.3.nupkg.sha512",
         "microsoft.identity.client.nuspec"
       ]
     },
-    "Microsoft.Identity.Client.Extensions.Msal/4.56.0": {
-      "sha512": "H12YAzEGK55vZ+QpxUzozhW8ZZtgPDuWvgA0JbdIR9UhMUplj29JhIgE2imuH8W2Nw9D8JKygR1uxRFtpSNcrg==",
+    "Microsoft.Identity.Client.Extensions.Msal/4.60.3": {
+      "sha512": "X1Cz14/RbmlLshusE5u2zfG+5ul6ttgou19BZe5Mdw1qm6fgOI9/imBB2TIsx2UD7nkgd2+MCSzhbukZf7udeg==",
       "type": "package",
-      "path": "microsoft.identity.client.extensions.msal/4.56.0",
+      "path": "microsoft.identity.client.extensions.msal/4.60.3",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
+        "lib/net6.0/Microsoft.Identity.Client.Extensions.Msal.dll",
+        "lib/net6.0/Microsoft.Identity.Client.Extensions.Msal.xml",
         "lib/netstandard2.0/Microsoft.Identity.Client.Extensions.Msal.dll",
         "lib/netstandard2.0/Microsoft.Identity.Client.Extensions.Msal.xml",
-        "microsoft.identity.client.extensions.msal.4.56.0.nupkg.sha512",
+        "microsoft.identity.client.extensions.msal.4.60.3.nupkg.sha512",
         "microsoft.identity.client.extensions.msal.nuspec"
       ]
     },
@@ -5521,22 +5779,19 @@
         "microsoft.net.test.sdk.nuspec"
       ]
     },
-    "Microsoft.NETCore.Platforms/5.0.0": {
-      "sha512": "VyPlqzH2wavqquTcYpkIIAQ6WdenuKoFN0BdYBbCWsclXacSOHNQn66Gt4z5NBqEYW0FAPm5rlvki9ZiCij5xQ==",
+    "Microsoft.NETCore.Platforms/1.1.0": {
+      "sha512": "kz0PEW2lhqygehI/d6XsPCQzD7ff7gUJaVGPVETX611eadGsA3A877GdSlU0LRVMCTH/+P3o2iDTak+S08V2+A==",
       "type": "package",
-      "path": "microsoft.netcore.platforms/5.0.0",
+      "path": "microsoft.netcore.platforms/1.1.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "Icon.png",
-        "LICENSE.TXT",
-        "THIRD-PARTY-NOTICES.TXT",
+        "ThirdPartyNotices.txt",
+        "dotnet_library_license.txt",
         "lib/netstandard1.0/_._",
-        "microsoft.netcore.platforms.5.0.0.nupkg.sha512",
+        "microsoft.netcore.platforms.1.1.0.nupkg.sha512",
         "microsoft.netcore.platforms.nuspec",
-        "runtime.json",
-        "useSharedDesignerContext.txt",
-        "version.txt"
+        "runtime.json"
       ]
     },
     "Microsoft.NETCore.Targets/1.1.0": {
@@ -5780,50 +6035,6 @@
         "ref/xamarinwatchos10/_._"
       ]
     },
-    "Microsoft.Win32.Registry/5.0.0": {
-      "sha512": "dDoKi0PnDz31yAyETfRntsLArTlVAVzUzCIvvEDsDsucrl33Dl8pIJG06ePTJTI3tGpeyHS9Cq7Foc/s4EeKcg==",
-      "type": "package",
-      "path": "microsoft.win32.registry/5.0.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "Icon.png",
-        "LICENSE.TXT",
-        "THIRD-PARTY-NOTICES.TXT",
-        "lib/net46/Microsoft.Win32.Registry.dll",
-        "lib/net461/Microsoft.Win32.Registry.dll",
-        "lib/net461/Microsoft.Win32.Registry.xml",
-        "lib/netstandard1.3/Microsoft.Win32.Registry.dll",
-        "lib/netstandard2.0/Microsoft.Win32.Registry.dll",
-        "lib/netstandard2.0/Microsoft.Win32.Registry.xml",
-        "microsoft.win32.registry.5.0.0.nupkg.sha512",
-        "microsoft.win32.registry.nuspec",
-        "ref/net46/Microsoft.Win32.Registry.dll",
-        "ref/net461/Microsoft.Win32.Registry.dll",
-        "ref/net461/Microsoft.Win32.Registry.xml",
-        "ref/netstandard1.3/Microsoft.Win32.Registry.dll",
-        "ref/netstandard1.3/Microsoft.Win32.Registry.xml",
-        "ref/netstandard1.3/de/Microsoft.Win32.Registry.xml",
-        "ref/netstandard1.3/es/Microsoft.Win32.Registry.xml",
-        "ref/netstandard1.3/fr/Microsoft.Win32.Registry.xml",
-        "ref/netstandard1.3/it/Microsoft.Win32.Registry.xml",
-        "ref/netstandard1.3/ja/Microsoft.Win32.Registry.xml",
-        "ref/netstandard1.3/ko/Microsoft.Win32.Registry.xml",
-        "ref/netstandard1.3/ru/Microsoft.Win32.Registry.xml",
-        "ref/netstandard1.3/zh-hans/Microsoft.Win32.Registry.xml",
-        "ref/netstandard1.3/zh-hant/Microsoft.Win32.Registry.xml",
-        "ref/netstandard2.0/Microsoft.Win32.Registry.dll",
-        "ref/netstandard2.0/Microsoft.Win32.Registry.xml",
-        "runtimes/win/lib/net46/Microsoft.Win32.Registry.dll",
-        "runtimes/win/lib/net461/Microsoft.Win32.Registry.dll",
-        "runtimes/win/lib/net461/Microsoft.Win32.Registry.xml",
-        "runtimes/win/lib/netstandard1.3/Microsoft.Win32.Registry.dll",
-        "runtimes/win/lib/netstandard2.0/Microsoft.Win32.Registry.dll",
-        "runtimes/win/lib/netstandard2.0/Microsoft.Win32.Registry.xml",
-        "useSharedDesignerContext.txt",
-        "version.txt"
-      ]
-    },
     "Microsoft.Win32.SystemEvents/6.0.0": {
       "sha512": "hqTM5628jSsQiv+HGpiq3WKBl2c8v1KZfby2J6Pr7pEPlK9waPdgEO6b8A/+/xn/yZ9ulv8HuqK71ONy2tg67A==",
       "type": "package",
@@ -5851,6 +6062,27 @@
         "runtimes/win/lib/netcoreapp3.1/Microsoft.Win32.SystemEvents.dll",
         "runtimes/win/lib/netcoreapp3.1/Microsoft.Win32.SystemEvents.xml",
         "useSharedDesignerContext.txt"
+      ]
+    },
+    "Moq/4.20.70": {
+      "sha512": "4rNnAwdpXJBuxqrOCzCyICXHSImOTRktCgCWXWykuF1qwoIsVvEnR7PjbMk/eLOxWvhmj5Kwt+kDV3RGUYcNwg==",
+      "type": "package",
+      "path": "moq/4.20.70",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "icon.png",
+        "lib/net462/Moq.dll",
+        "lib/net462/Moq.xml",
+        "lib/net6.0/Moq.dll",
+        "lib/net6.0/Moq.xml",
+        "lib/netstandard2.0/Moq.dll",
+        "lib/netstandard2.0/Moq.xml",
+        "lib/netstandard2.1/Moq.dll",
+        "lib/netstandard2.1/Moq.xml",
+        "moq.4.20.70.nupkg.sha512",
+        "moq.nuspec",
+        "readme.md"
       ]
     },
     "NETStandard.Library/1.6.1": {
@@ -6205,6 +6437,24 @@
         "system.buffers.nuspec"
       ]
     },
+    "System.ClientModel/1.0.0": {
+      "sha512": "I3CVkvxeqFYjIVEP59DnjbeoGNfo/+SZrCLpRz2v/g0gpCHaEMPtWSY0s9k/7jR1rAsLNg2z2u1JRB76tPjnIw==",
+      "type": "package",
+      "path": "system.clientmodel/1.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "CHANGELOG.md",
+        "DotNetPackageIcon.png",
+        "README.md",
+        "lib/net6.0/System.ClientModel.dll",
+        "lib/net6.0/System.ClientModel.xml",
+        "lib/netstandard2.0/System.ClientModel.dll",
+        "lib/netstandard2.0/System.ClientModel.xml",
+        "system.clientmodel.1.0.0.nupkg.sha512",
+        "system.clientmodel.nuspec"
+      ]
+    },
     "System.Collections/4.3.0": {
       "sha512": "3Dcj85/TBdVpL5Zr+gEEBUuFe2icOnLalmEh9hfck1PTYbbyWuZgh4fmm2ysCLTrqLQw6t3TgTyJ+VLp+Qb+Lw==",
       "type": "package",
@@ -6525,69 +6775,64 @@
         "useSharedDesignerContext.txt"
       ]
     },
-    "System.Diagnostics.EventLog/5.0.0": {
-      "sha512": "FHkCwUfsTs+/5tsK+c0egLfacUgbhvcwi3wUFWSEEArSXao343mYqcpOVVFMlcCkdNtjU4YwAWaKYwal6f02og==",
+    "System.Diagnostics.EventLog/6.0.0": {
+      "sha512": "lcyUiXTsETK2ALsZrX+nWuHSIQeazhqPphLfaRxzdGaG93+0kELqpgEHtwWOlQe7+jSFnKwaCAgL4kjeZCQJnw==",
       "type": "package",
-      "path": "system.diagnostics.eventlog/5.0.0",
+      "path": "system.diagnostics.eventlog/6.0.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "Icon.png",
         "LICENSE.TXT",
         "THIRD-PARTY-NOTICES.TXT",
+        "buildTransitive/netcoreapp2.0/System.Diagnostics.EventLog.targets",
+        "buildTransitive/netcoreapp3.1/_._",
         "lib/net461/System.Diagnostics.EventLog.dll",
         "lib/net461/System.Diagnostics.EventLog.xml",
+        "lib/net6.0/System.Diagnostics.EventLog.dll",
+        "lib/net6.0/System.Diagnostics.EventLog.xml",
+        "lib/netcoreapp3.1/System.Diagnostics.EventLog.dll",
+        "lib/netcoreapp3.1/System.Diagnostics.EventLog.xml",
         "lib/netstandard2.0/System.Diagnostics.EventLog.dll",
         "lib/netstandard2.0/System.Diagnostics.EventLog.xml",
-        "ref/net461/System.Diagnostics.EventLog.dll",
-        "ref/net461/System.Diagnostics.EventLog.xml",
-        "ref/netstandard2.0/System.Diagnostics.EventLog.dll",
-        "ref/netstandard2.0/System.Diagnostics.EventLog.xml",
-        "runtimes/win/lib/netcoreapp2.0/System.Diagnostics.EventLog.dll",
-        "runtimes/win/lib/netcoreapp2.0/System.Diagnostics.EventLog.xml",
-        "system.diagnostics.eventlog.5.0.0.nupkg.sha512",
+        "runtimes/win/lib/net6.0/System.Diagnostics.EventLog.Messages.dll",
+        "runtimes/win/lib/net6.0/System.Diagnostics.EventLog.dll",
+        "runtimes/win/lib/net6.0/System.Diagnostics.EventLog.xml",
+        "runtimes/win/lib/netcoreapp3.1/System.Diagnostics.EventLog.Messages.dll",
+        "runtimes/win/lib/netcoreapp3.1/System.Diagnostics.EventLog.dll",
+        "runtimes/win/lib/netcoreapp3.1/System.Diagnostics.EventLog.xml",
+        "system.diagnostics.eventlog.6.0.0.nupkg.sha512",
         "system.diagnostics.eventlog.nuspec",
-        "useSharedDesignerContext.txt",
-        "version.txt"
+        "useSharedDesignerContext.txt"
       ]
     },
-    "System.Diagnostics.PerformanceCounter/4.7.0": {
-      "sha512": "kE9szT4i3TYT9bDE/BPfzg9/BL6enMiZlcUmnUEBrhRtxWvurKoa8qhXkLTRhrxMzBqaDleWlRfIPE02tulU+w==",
+    "System.Diagnostics.PerformanceCounter/6.0.0": {
+      "sha512": "gbeE5tNp/oB7O8kTTLh3wPPJCxpNOphXPTWVs1BsYuFOYapFijWuh0LYw1qnDo4gwDUYPXOmpTIhvtxisGsYOQ==",
       "type": "package",
-      "path": "system.diagnostics.performancecounter/4.7.0",
+      "path": "system.diagnostics.performancecounter/6.0.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
+        "Icon.png",
         "LICENSE.TXT",
         "THIRD-PARTY-NOTICES.TXT",
-        "lib/MonoAndroid10/_._",
-        "lib/MonoTouch10/_._",
+        "buildTransitive/netcoreapp2.0/System.Diagnostics.PerformanceCounter.targets",
+        "buildTransitive/netcoreapp3.1/_._",
         "lib/net461/System.Diagnostics.PerformanceCounter.dll",
         "lib/net461/System.Diagnostics.PerformanceCounter.xml",
+        "lib/net6.0/System.Diagnostics.PerformanceCounter.dll",
+        "lib/net6.0/System.Diagnostics.PerformanceCounter.xml",
+        "lib/netcoreapp3.1/System.Diagnostics.PerformanceCounter.dll",
+        "lib/netcoreapp3.1/System.Diagnostics.PerformanceCounter.xml",
         "lib/netstandard2.0/System.Diagnostics.PerformanceCounter.dll",
         "lib/netstandard2.0/System.Diagnostics.PerformanceCounter.xml",
-        "lib/xamarinios10/_._",
-        "lib/xamarinmac20/_._",
-        "lib/xamarintvos10/_._",
-        "lib/xamarinwatchos10/_._",
-        "ref/MonoAndroid10/_._",
-        "ref/MonoTouch10/_._",
-        "ref/net461/System.Diagnostics.PerformanceCounter.dll",
-        "ref/net461/System.Diagnostics.PerformanceCounter.xml",
-        "ref/net472/System.Diagnostics.PerformanceCounter.dll",
-        "ref/net472/System.Diagnostics.PerformanceCounter.xml",
-        "ref/netstandard2.0/System.Diagnostics.PerformanceCounter.dll",
-        "ref/netstandard2.0/System.Diagnostics.PerformanceCounter.xml",
-        "ref/xamarinios10/_._",
-        "ref/xamarinmac20/_._",
-        "ref/xamarintvos10/_._",
-        "ref/xamarinwatchos10/_._",
-        "runtimes/win/lib/netcoreapp2.0/System.Diagnostics.PerformanceCounter.dll",
-        "runtimes/win/lib/netcoreapp2.0/System.Diagnostics.PerformanceCounter.xml",
-        "system.diagnostics.performancecounter.4.7.0.nupkg.sha512",
+        "runtimes/win/lib/net6.0/System.Diagnostics.PerformanceCounter.dll",
+        "runtimes/win/lib/net6.0/System.Diagnostics.PerformanceCounter.xml",
+        "runtimes/win/lib/netcoreapp3.1/System.Diagnostics.PerformanceCounter.dll",
+        "runtimes/win/lib/netcoreapp3.1/System.Diagnostics.PerformanceCounter.xml",
+        "system.diagnostics.performancecounter.6.0.0.nupkg.sha512",
         "system.diagnostics.performancecounter.nuspec",
-        "useSharedDesignerContext.txt",
-        "version.txt"
+        "useSharedDesignerContext.txt"
       ]
     },
     "System.Diagnostics.Tools/4.3.0": {
@@ -7195,14 +7440,13 @@
         "system.io.filesystem.nuspec"
       ]
     },
-    "System.IO.FileSystem.AccessControl/5.0.0": {
-      "sha512": "SxHB3nuNrpptVk+vZ/F+7OHEpoHUIKKMl02bUmYHQr1r+glbZQxs7pRtsf4ENO29TVm2TH3AEeep2fJcy92oYw==",
+    "System.IO.FileSystem.AccessControl/4.7.0": {
+      "sha512": "vMToiarpU81LR1/KZtnT7VDPvqAZfw9oOS5nY6pPP78nGYz3COLsQH3OfzbR+SjTgltd31R6KmKklz/zDpTmzw==",
       "type": "package",
-      "path": "system.io.filesystem.accesscontrol/5.0.0",
+      "path": "system.io.filesystem.accesscontrol/4.7.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "Icon.png",
         "LICENSE.TXT",
         "THIRD-PARTY-NOTICES.TXT",
         "lib/net46/System.IO.FileSystem.AccessControl.dll",
@@ -7233,7 +7477,7 @@
         "runtimes/win/lib/netstandard1.3/System.IO.FileSystem.AccessControl.dll",
         "runtimes/win/lib/netstandard2.0/System.IO.FileSystem.AccessControl.dll",
         "runtimes/win/lib/netstandard2.0/System.IO.FileSystem.AccessControl.xml",
-        "system.io.filesystem.accesscontrol.5.0.0.nupkg.sha512",
+        "system.io.filesystem.accesscontrol.4.7.0.nupkg.sha512",
         "system.io.filesystem.accesscontrol.nuspec",
         "useSharedDesignerContext.txt",
         "version.txt"
@@ -10024,30 +10268,32 @@
   "projectFileDependencyGroups": {
     "net8.0": [
       "AccountProvider >= 1.0.0",
+      "Microsoft.EntityFrameworkCore.InMemory >= 8.0.5",
       "Microsoft.NET.Test.Sdk >= 17.8.0",
+      "Moq >= 4.20.70",
       "coverlet.collector >= 6.0.0",
       "xunit >= 2.5.3",
       "xunit.runner.visualstudio >= 2.5.3"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\hugoe\\.nuget\\packages\\": {},
+    "C:\\Users\\Andro\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Nackademin\\AccountProvider\\AccountProvider\\ProviderTests\\ProviderTests.csproj",
+      "projectUniqueName": "D:\\nackademin\\cms23-Asp2-Manero\\AccountProvider\\AccountProvider\\ProviderTests\\ProviderTests.csproj",
       "projectName": "ProviderTests",
-      "projectPath": "C:\\Nackademin\\AccountProvider\\AccountProvider\\ProviderTests\\ProviderTests.csproj",
-      "packagesPath": "C:\\Users\\hugoe\\.nuget\\packages\\",
-      "outputPath": "C:\\Nackademin\\AccountProvider\\AccountProvider\\ProviderTests\\obj\\",
+      "projectPath": "D:\\nackademin\\cms23-Asp2-Manero\\AccountProvider\\AccountProvider\\ProviderTests\\ProviderTests.csproj",
+      "packagesPath": "C:\\Users\\Andro\\.nuget\\packages\\",
+      "outputPath": "D:\\nackademin\\cms23-Asp2-Manero\\AccountProvider\\AccountProvider\\ProviderTests\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\hugoe\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Andro\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -10063,8 +10309,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Nackademin\\AccountProvider\\AccountProvider\\AccountProvider\\AccountProvider.csproj": {
-              "projectPath": "C:\\Nackademin\\AccountProvider\\AccountProvider\\AccountProvider\\AccountProvider.csproj"
+            "D:\\nackademin\\cms23-Asp2-Manero\\AccountProvider\\AccountProvider\\AccountProvider\\AccountProvider.csproj": {
+              "projectPath": "D:\\nackademin\\cms23-Asp2-Manero\\AccountProvider\\AccountProvider\\AccountProvider\\AccountProvider.csproj"
             }
           }
         }
@@ -10084,9 +10330,17 @@
       "net8.0": {
         "targetAlias": "net8.0",
         "dependencies": {
+          "Microsoft.EntityFrameworkCore.InMemory": {
+            "target": "Package",
+            "version": "[8.0.5, )"
+          },
           "Microsoft.NET.Test.Sdk": {
             "target": "Package",
             "version": "[17.8.0, )"
+          },
+          "Moq": {
+            "target": "Package",
+            "version": "[4.20.70, )"
           },
           "coverlet.collector": {
             "target": "Package",
@@ -10117,7 +10371,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
