@@ -25,6 +25,11 @@ public class AccountRepository(Context context) : IAccountRepository
         AccountEntity? account = await _context.Accounts.FirstOrDefaultAsync(x => x.UserId == id);
         return account!;
     }   
+    public async Task<AccountEntity> GetByEmailAsync(string email)
+    {
+        AccountEntity? account = await _context.Accounts.FirstOrDefaultAsync(x => x.Email == email);
+        return account!;
+    }
     public async Task<AccountEntity> UpdateAsync(AccountEntity entity)
     {
         AccountEntity modifiedStateEntity = _context.Update(entity).Entity;

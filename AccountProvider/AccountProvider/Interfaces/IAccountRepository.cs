@@ -14,6 +14,7 @@ namespace AccountProvider.Interfaces
         Task<bool> DeleteAsync(string id);
         Task<IEnumerable<AccountEntity>> GetAllAsync();
         Task<AccountEntity> GetOneAsync(string id);
+        Task<AccountEntity> GetByEmailAsync(string email);
         Task<AccountEntity> UpdateAsync(AccountEntity entity);
         Task<bool> ExistsAsync(Expression<Func<AccountEntity, bool>> predicate);
     }

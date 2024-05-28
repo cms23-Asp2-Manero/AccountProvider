@@ -1,5 +1,7 @@
 using AccountProvider.Data.Contexts;
+using AccountProvider.Interfaces;
 using AccountProvider.Models;
+using AccountProvider.Repositories;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Azure.Functions.Worker;
@@ -12,29 +14,28 @@ namespace AccountProvider.Functions;
 public class UpdateProfilePic
 {
     private readonly ILogger<UpdateProfilePic> _logger;
-    private readonly Context _context;
+    private readonly IAccountRepository _accountRepository;
 
-    public UpdateProfilePic(ILogger<UpdateProfilePic> logger, Context context)
+    public UpdateProfilePic(ILogger<UpdateProfilePic> logger, IAccountRepository accountRepository)
     {
         _logger = logger;
-        _context = context;
+        _accountRepository = accountRepository;
     }
 
     [Function("UpdateProfilePic")]
-    public async Task<IActionResult> Run([HttpTrigger(AuthorizationLevel.Function, "get", "post")] HttpRequest req)
+    public async Task<IActionResult> Run([HttpTrigger(AuthorizationLevel.Function, "post")] HttpRequest req)
     {
         try
         {
             var model = await UnpackUpdateProfilePicModel(req);
             if(model != null)
             {
-                var user = await _context.Accounts.FirstOrDefaultAsync(x => x.Email == model.Email);
+                var user = await _accountRepository.GetByEmailAsync(model.Email);
                 if(user != null)
                 {
                     user.ImageUrl = model.ImgUrl;
 
-                    _context.Update(user);
-                    await _context.SaveChangesAsync();
+                    await _accountRepository.UpdateAsync(user);
 
                     return new OkResult();
                 }
