@@ -2,6 +2,7 @@ using System;
 using System.Threading.Tasks;
 using AccountProvider.Data.Entities;
 using AccountProvider.Helpers;
+using AccountProvider.Interfaces;
 using AccountProvider.Repositories;
 using Azure.Messaging.ServiceBus;
 using Microsoft.AspNetCore.Http;
@@ -15,17 +16,13 @@ namespace AccountProvider.Functions
     public class Create
     {
         private readonly ILogger<Create> _logger;
-        private readonly AccountRepository _accountRepository;
-        private readonly ServiceBusClient _client;
-        private ServiceBusSender _verificationSender;
-        private ServiceBusSender _accountSender;
+        private readonly IAccountRepository _accountRepository;
 
-        public Create(ILogger<Create> logger, AccountRepository accountRepository, ServiceBusClient client)
+
+        public Create(ILogger<Create> logger, IAccountRepository accountRepository)
         {
             _logger = logger;
             _accountRepository = accountRepository;
-            _client = new ServiceBusClient(Environment.GetEnvironmentVariable("ServiceBus"));
-            _accountSender = _client.CreateSender("create_account_request");
         }
 
         [Function(nameof(Create))]

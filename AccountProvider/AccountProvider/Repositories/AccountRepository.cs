@@ -11,7 +11,7 @@ public class AccountRepository(Context context) : IAccountRepository
 
     public async Task<AccountEntity> CreateAsync(AccountEntity entity)
     {
-        AccountEntity addedStateEntity = _context.Accounts.Add(entity).Entity;
+        var addedStateEntity = _context.Accounts.Add(entity).Entity;
         await _context.SaveChangesAsync();
         return addedStateEntity;
     }
