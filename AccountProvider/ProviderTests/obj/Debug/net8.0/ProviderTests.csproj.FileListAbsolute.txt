@@ -6,7 +6,6 @@ D:\nackademin\cms23-Asp2-Manero\AccountProvider\AccountProvider\ProviderTests\bi
 D:\nackademin\cms23-Asp2-Manero\AccountProvider\AccountProvider\ProviderTests\bin\Debug\net8.0\local.settings.json
 D:\nackademin\cms23-Asp2-Manero\AccountProvider\AccountProvider\ProviderTests\bin\Debug\net8.0\AccountProvider.exe
 D:\nackademin\cms23-Asp2-Manero\AccountProvider\AccountProvider\ProviderTests\bin\Debug\net8.0\testhost.exe
-D:\nackademin\cms23-Asp2-Manero\AccountProvider\AccountProvider\ProviderTests\bin\Debug\net8.0\xunit.runner.visualstudio.dotnetcore.testadapter.dll
 D:\nackademin\cms23-Asp2-Manero\AccountProvider\AccountProvider\ProviderTests\bin\Debug\net8.0\xunit.runner.reporters.netcoreapp10.dll
 D:\nackademin\cms23-Asp2-Manero\AccountProvider\AccountProvider\ProviderTests\bin\Debug\net8.0\xunit.runner.utility.netcoreapp10.dll
 D:\nackademin\cms23-Asp2-Manero\AccountProvider\AccountProvider\ProviderTests\bin\Debug\net8.0\ProviderTests.deps.json
@@ -73,7 +72,6 @@ D:\nackademin\cms23-Asp2-Manero\AccountProvider\AccountProvider\ProviderTests\bi
 D:\nackademin\cms23-Asp2-Manero\AccountProvider\AccountProvider\ProviderTests\bin\Debug\net8.0\Microsoft.Win32.SystemEvents.dll
 D:\nackademin\cms23-Asp2-Manero\AccountProvider\AccountProvider\ProviderTests\bin\Debug\net8.0\Moq.dll
 D:\nackademin\cms23-Asp2-Manero\AccountProvider\AccountProvider\ProviderTests\bin\Debug\net8.0\Newtonsoft.Json.dll
-D:\nackademin\cms23-Asp2-Manero\AccountProvider\AccountProvider\ProviderTests\bin\Debug\net8.0\NuGet.Frameworks.dll
 D:\nackademin\cms23-Asp2-Manero\AccountProvider\AccountProvider\ProviderTests\bin\Debug\net8.0\System.ClientModel.dll
 D:\nackademin\cms23-Asp2-Manero\AccountProvider\AccountProvider\ProviderTests\bin\Debug\net8.0\System.Configuration.ConfigurationManager.dll
 D:\nackademin\cms23-Asp2-Manero\AccountProvider\AccountProvider\ProviderTests\bin\Debug\net8.0\System.Diagnostics.PerformanceCounter.dll
@@ -181,3 +179,4 @@ D:\nackademin\cms23-Asp2-Manero\AccountProvider\AccountProvider\ProviderTests\ob
 D:\nackademin\cms23-Asp2-Manero\AccountProvider\AccountProvider\ProviderTests\obj\Debug\net8.0\ProviderTests.pdb
 D:\nackademin\cms23-Asp2-Manero\AccountProvider\AccountProvider\ProviderTests\obj\Debug\net8.0\ProviderTests.genruntimeconfig.cache
 D:\nackademin\cms23-Asp2-Manero\AccountProvider\AccountProvider\ProviderTests\obj\Debug\net8.0\ref\ProviderTests.dll
+D:\nackademin\cms23-Asp2-Manero\AccountProvider\AccountProvider\ProviderTests\bin\Debug\net8.0\xunit.runner.visualstudio.testadapter.dll
